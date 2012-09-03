@@ -12,7 +12,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kero-tudo_development
+  database: kerotudo
   pool: 5
   username: root
   password: aaa123
@@ -25,11 +25,11 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kero-tudo_test
+  database: kerotudo_test
   pool: 5
   username: root
   password: aaa123
   socket: /tmp/mysql.sock
 
 production:
-	development
+  development
