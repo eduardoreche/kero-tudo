@@ -1,0 +1,43 @@
+<h1><%= plural_table_name %></h1>
+<div class="pull-right">
+  <a href="<%%= new_<%= singular_table_name %>_path %>" class="btn btn-primary btn-large">
+    <i class="icon-plus icon-white"></i>
+    <%= "Create #{singular_table_name}" %>
+  </a>
+</div>
+
+<%% if @<%= plural_table_name %>.size > 0 %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+  <% attributes.each do |attribute| -%>
+      <th><%= attribute.human_name %></th>
+  <% end -%>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+  <%%= content_tag_for(:tr, @<%= plural_table_name %>) do |<%= singular_table_name %>| %>
+      <td><%%= <%= singular_table_name %>.id %></td>
+  <% attributes.each_with_index do |attribute, index| -%>
+      <td>
+      <%- if index == 0 -%>
+        <%%= link_to <%= singular_table_name %>.<%= attribute.name %>, <%= singular_table_name %> %>
+      <%- else -%>
+        <%%= <%= singular_table_name %>.<%= attribute.name %> %>
+      <%- end -%>
+      </td>
+  <% end -%>
+      <td><%%= <%= singular_table_name %>.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+      <td>
+        <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-mini' %>
+        <%%= link_to 'Destroy', <%= singular_table_name %>, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+      </td>
+  <%% end %>
+  </tbody>
+</table>
+<%% end %>
