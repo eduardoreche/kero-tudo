@@ -31,5 +31,8 @@ gem 'rspec-rails', :group => [:test, :development]
 group :test do
   gem "factory_girl_rails"
   gem "capybara"
+  gem "capybara-webkit"
   gem "guard-rspec"
+  gem 'launchy'  
+  gem "database_cleaner"
 end

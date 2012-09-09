@@ -1,0 +1,35 @@
+<h1>Groups</h1>
+<div class="pull-right">
+  <a href="<%= new_group_path %>" class="btn btn-primary btn-large" id="create_link">
+    <i class="icon-plus icon-white"></i>
+    Create group
+  </a>
+</div>
+
+<% if @groups.size > 0 %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+        <th>Name</th>
+        <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+  <%= content_tag_for(:tr, @groups) do |group| %>
+      <td><%= group.id %></td>
+        <td>
+        <%= link_to group.name, group %>
+      </td>
+        <td><%= group.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+      <td>
+        <%= link_to 'Edit', edit_group_path(group), :class => 'btn btn-mini' %>
+        <%= link_to 'Destroy', group, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+      </td>
+  <% end %>
+  </tbody>
+</table>
+<% end %>
