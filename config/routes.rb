@@ -1,5 +1,7 @@
 KeroTudo::Application.routes.draw do
   
+  resources :products
+
   resources :tags
 
   resources :groups
