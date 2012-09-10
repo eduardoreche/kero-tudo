@@ -1,6 +1,11 @@
 <h1>Products</h1>
 
 <p>
+  <strong>Group:</strong>
+  <%= @product.group.name %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
@@ -11,8 +16,10 @@
 </p>
 
 <p>
-  <strong>Group:</strong>
-  <%= @product.group %>
+  <strong>Tags:</strong>
+  <% @product.tag.each do |tag| %>
+  <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
 </p>
 
 

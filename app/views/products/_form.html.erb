@@ -1,9 +1,10 @@
 <%= simple_form_for(@product, :html => {:class => 'form-horizontal' }) do |f| %>
   <div class="well">
     <%= f.error_notification %>
-      <%= f.input :name %>
-      <%= f.input :description %>
-      <%= f.association :group %>
+    <%= f.association :group %>
+    <%= f.input :name %>
+    <%= f.input :description, :input_html => {:class => "span6", :rows => 4 } %>
+    <%= f.association :tag, :input_html => {:class => "span6", :rows => 4 } %>
     
     <div class="controls">
       <%= f.button :submit, :class => "btn btn-primary" %>
