@@ -1,0 +1,13 @@
+<%= simple_form_for([@product,@picture], :html => {class: 'form-horizontal', multipart: true }) do |f| %>
+  <div class="well">
+    <%= f.error_notification %>
+      <%= f.input :picture, as: :file, input_html: {class: "input-file"} %>
+      <%= f.input :description %>
+    
+    <div class="controls">
+      <%= f.button :submit, :class => "btn btn-primary" %>
+      <%= link_to 'Cancel', product_pictures_path(@product), :class => 'btn' %>
+    </div>
+
+  </div>
+<% end %>

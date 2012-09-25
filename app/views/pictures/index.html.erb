@@ -1,0 +1,26 @@
+<h1><i class="icon-picture"></i> <%= @product.name %> Pictures</h1>
+<div>
+  <a href="<%= new_product_picture_path(@product) %>" class="btn btn-primary btn-large">
+    <i class="icon-plus icon-white"></i> Add picture
+  </a>
+</div>
+<p>&nbsp;</p>
+<% if @pictures.size > 0 %>
+<div class="span9">
+  <ul class="thumbnails">
+    <% @pictures.each do |picture| %>
+      <li class="span2">
+        <div class="thumbnail">
+          <%= image_tag picture.picture.url(:thumb) %>
+        <h6>&nbsp;<%= picture.description %></h6>
+        <p>
+        <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_product_picture_path(@product,picture), :class => 'btn btn-mini' %>
+        <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, product_picture_path(@product,picture), confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+        </p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<% end %>

@@ -1,4 +1,4 @@
-<h1>Products</h1>
+<h1><i class="icon-gift"></i> Products</h1>
 <div class="pull-right">
   <a href="<%= new_product_path %>" class="btn btn-primary btn-large">
     <i class="icon-plus icon-white"></i>
@@ -34,8 +34,9 @@
       </td>
         <td><%= product.created_at.strftime("%d/%m/%Y %H:%M") %></td>
       <td>
-        <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-mini' %>
-        <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+        <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_product_path(product), :class => 'btn btn-mini' %>
+        <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, product, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+        <%= link_to '<i class="icon-picture"></i> Pictures'.html_safe, product_pictures_path(product), class: "btn btn-mini" %>
       </td>
   <% end %>
   </tbody>
