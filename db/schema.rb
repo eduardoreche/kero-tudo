@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911000009) do
+ActiveRecord::Schema.define(:version => 20120925224529) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
@@ -42,13 +42,15 @@ ActiveRecord::Schema.define(:version => 20120911000009) do
 
   add_index "products", ["group_id"], :name => "index_products_on_group_id"
 
-  create_table "products_tags", :id => false, :force => true do |t|
-    t.integer "product_id"
-    t.integer "tag_id"
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
-  add_index "products_tags", ["product_id"], :name => "index_products_tags_on_product_id"
-  add_index "products_tags", ["tag_id"], :name => "index_products_tags_on_tag_id"
+  add_index "taggings", ["product_id"], :name => "index_taggings_on_product_id"
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
 
   create_table "tags", :force => true do |t|
     t.string   "name"

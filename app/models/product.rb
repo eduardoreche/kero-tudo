@@ -1,7 +1,8 @@
 class Product < ActiveRecord::Base
   belongs_to :group
-  has_and_belongs_to_many :tag
   has_many :pictures
+  has_many :taggings
+  has_many :tags, through: :taggings
   
   attr_accessible :description, :name, :group_id, :tag_ids
   

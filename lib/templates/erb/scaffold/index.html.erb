@@ -1,6 +1,6 @@
 <h1><%= plural_table_name.humanize %></h1>
 <div class="pull-right">
-  <%<%= link_to "<i class='icon-plus icon-white'></i> Create #{singular_table_name}".html_safe, new_<%= singular_table_name %>_path %>
+  <%%= link_to "<i class='icon-plus icon-white'></i> Create #{singular_table_name}".html_safe, new_<%= singular_table_name %>_path, class: "btn btn-primary btn-large" %> 
 </div>
 
 <%% if @<%= plural_table_name %>.size > 0 %>

@@ -4,7 +4,7 @@
     <%= f.association :group %>
     <%= f.input :name %>
     <%= f.input :description, :input_html => {:class => "span6", :rows => 4 } %>
-    <%= f.association :tag, :input_html => {:class => "span6", :rows => 4 } %>
+    <%= f.association :tags, :input_html => {:class => "span6", :rows => 4 } %>
     
     <div class="controls">
       <%= f.button :submit, :class => "btn btn-primary" %>
