@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require chosen-jquery
 //= require twitter/bootstrap
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
 //= require_tree .

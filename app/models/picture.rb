@@ -6,4 +6,10 @@ class Picture < ActiveRecord::Base
   
   validates_presence_of :picture
   validates_attachment :picture, attachment_presence: true
+  
+  before_create :default_description
+  
+  def default_description
+    self.description ||= File.basename(picture.path, File.extname(picture.path)).titleize if picture
+  end
 end

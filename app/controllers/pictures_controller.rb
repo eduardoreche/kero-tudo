@@ -43,16 +43,7 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = @product.pictures.build(params[:picture])
-
-    respond_to do |format|
-      if @picture.save
-        format.html { redirect_to product_pictures_path(@product), notice: 'Picture was successfully created.' }
-        format.json { render json: product_pictures_path(@product), status: :created, location: product_pictures_path(@product) }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
-      end
-    end
+    @picture.save
   end
 
   # PUT /pictures/1
