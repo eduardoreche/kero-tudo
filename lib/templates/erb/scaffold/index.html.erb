@@ -1,40 +1,47 @@
 <h1><%= plural_table_name.humanize %></h1>
-<div class="pull-right">
-  <%%= link_to "<i class='icon-plus icon-white'></i> Create #{singular_table_name}".html_safe, new_<%= singular_table_name %>_path, class: "btn btn-primary btn-large" %> 
+<div class="row">
+  <div class="pull-right">
+    <%%= link_to "<i class='icon-plus icon-white'></i> Create <%= singular_table_name %>".html_safe, new_<%= singular_table_name %>_path, class: "btn btn-primary btn-large" %> 
+  </div>
 </div>
 
-<%% if @<%= plural_table_name %>.size > 0 %>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-  <% attributes.each do |attribute| -%>
-      <th><%= attribute.human_name %></th>
-  <% end -%>
-      <th>Created at</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="span9">
 
-  <tbody>
+    <%% if @<%= plural_table_name %>.size > 0 %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+      <% attributes.each do |attribute| -%>
+          <th><%= attribute.human_name %></th>
+      <% end -%>
+          <th>Created at</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
   
-  <%%= content_tag_for(:tr, @<%= plural_table_name %>) do |<%= singular_table_name %>| %>
-      <td><%%= <%= singular_table_name %>.id %></td>
-  <% attributes.each_with_index do |attribute, index| -%>
-      <td>
-      <%- if index == 0 -%>
-        <%%= link_to <%= singular_table_name %>.<%= attribute.name %>, <%= singular_table_name %> %>
-      <%- else -%>
-        <%%= <%= singular_table_name %>.<%= attribute.name %> %>
-      <%- end -%>
-      </td>
-  <% end -%>
-      <td><%%= <%= singular_table_name %>.created_at.strftime("%d/%m/%Y %H:%M") %></td>
-      <td>
-        <%%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-mini' %>
-        <%%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, <%= singular_table_name %>, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
-      </td>
-  <%% end %>
-  </tbody>
-</table>
-<%% end %>
+      <%%= content_tag_for(:tr, @<%= plural_table_name %>) do |<%= singular_table_name %>| %>
+          <td><%%= <%= singular_table_name %>.id %></td>
+      <% attributes.each_with_index do |attribute, index| -%>
+          <td>
+          <%- if index == 0 -%>
+            <%%= link_to <%= singular_table_name %>.<%= attribute.name %>, <%= singular_table_name %> %>
+          <%- else -%>
+            <%%= <%= singular_table_name %>.<%= attribute.name %> %>
+          <%- end -%>
+          </td>
+      <% end -%>
+          <td><%%= <%= singular_table_name %>.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+          <td>
+            <%%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-mini' %>
+            <%%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, <%= singular_table_name %>, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+          </td>
+      <%% end %>
+      </tbody>
+    </table>
+    <%% end %>
+  </div>
+</div>

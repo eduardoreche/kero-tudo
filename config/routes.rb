@@ -1,5 +1,7 @@
 KeroTudo::Application.routes.draw do
   
+  resources :celebrations
+
   resources :tags
 
   resources :products do 

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120925224529) do
+ActiveRecord::Schema.define(:version => 20121023000627) do
+
+  create_table "celebrations", :force => true do |t|
+    t.string   "description"
+    t.integer  "day"
+    t.integer  "month"
+    t.boolean  "special"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "groups", :force => true do |t|
     t.string   "name"
@@ -41,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20120925224529) do
   end
 
   add_index "products", ["group_id"], :name => "index_products_on_group_id"
+
+  create_table "products_tags", :id => false, :force => true do |t|
+    t.integer "product_id"
+    t.integer "tag_id"
+  end
+
+  add_index "products_tags", ["product_id"], :name => "index_products_tags_on_product_id"
+  add_index "products_tags", ["tag_id"], :name => "index_products_tags_on_tag_id"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

@@ -1,44 +1,52 @@
 <h1><i class="icon-gift"></i> Products</h1>
-<div class="pull-right">
-  <a href="<%= new_product_path %>" class="btn btn-primary btn-large">
-    <i class="icon-plus icon-white"></i>
-    Create product
-  </a>
+<div class="row">
+  <div class="pull-right">
+    <a href="<%= new_product_path %>" class="btn btn-primary btn-large">
+      <i class="icon-plus icon-white"></i>
+      Create product
+    </a>
+  </div>
 </div>
 
-<% if @products.size > 0 %>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Group</th>
-        <th>Created at</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="span9">
+    
 
-  <tbody>
+    <% if @products.size > 0 %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Group</th>
+            <th>Created at</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
   
-  <%= content_tag_for(:tr, @products) do |product| %>
-      <td><%= product.id %></td>
-        <td>
-        <%= link_to product.name, product %>
-      </td>
-        <td>
-        <%= product.description %>
-      </td>
-        <td>
-          <%= product.group.name %>
-      </td>
-        <td><%= product.created_at.strftime("%d/%m/%Y %H:%M") %></td>
-      <td>
-        <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_product_path(product), :class => 'btn btn-mini' %>
-        <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, product, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
-        <%= link_to '<i class="icon-picture"></i> Pictures'.html_safe, product_pictures_path(product), class: "btn btn-mini" %>
-      </td>
-  <% end %>
-  </tbody>
-</table>
-<% end %>
+      <%= content_tag_for(:tr, @products) do |product| %>
+          <td><%= product.id %></td>
+            <td>
+            <%= link_to product.name, product %>
+          </td>
+            <td>
+            <%= product.description %>
+          </td>
+            <td>
+              <%= product.group.name %>
+          </td>
+            <td><%= product.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+          <td>
+            <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_product_path(product), :class => 'btn btn-mini' %>
+            <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, product, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+            <%= link_to '<i class="icon-picture"></i> Pictures'.html_safe, product_pictures_path(product), class: "btn btn-mini" %>
+          </td>
+      <% end %>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>

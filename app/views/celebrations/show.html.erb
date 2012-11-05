@@ -1,0 +1,25 @@
+<h1>Celebrations</h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @celebration.description %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @celebration.day %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @celebration.month %>
+</p>
+
+<p>
+  <strong>Special:</strong>
+  <%= @celebration.special %>
+</p>
+
+
+<%= link_to 'Edit', edit_celebration_path(@celebration) %> |
+<%= link_to 'Back', celebrations_path %>

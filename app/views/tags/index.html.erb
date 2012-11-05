@@ -1,32 +1,38 @@
-<h1>Tags</h1>
-<div class="pull-right">
-  <%= link_to "<i class='icon-plus icon-white'></i> Create tag".html_safe, new_tag_path, class: "btn btn-primary btn-large" %> 
+<h1><i class="icon-tags"></i> Tags</h1>
+<div class="row">
+  <div class="pull-right">
+    <%= link_to "<i class='icon-plus icon-white'></i> Create tag".html_safe, new_tag_path, class: "btn btn-primary btn-large" %> 
+  </div>
 </div>
 
-<% if @tags.size > 0 %>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-        <th>Name</th>
-        <th>Created at</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="span9">
+    <% if @tags.size > 0 %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+            <th>Name</th>
+            <th>Created at</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
 
-  <tbody>
+      <tbody>
   
-  <%= content_tag_for(:tr, @tags) do |tag| %>
-      <td><%= tag.id %></td>
-        <td>
-        <%= link_to tag.name, tag %>
-      </td>
-        <td><%= tag.created_at.strftime("%d/%m/%Y %H:%M") %></td>
-      <td>
-        <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_tag_path(tag), :class => 'btn btn-mini' %>
-        <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, tag, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
-      </td>
-  <% end %>
-  </tbody>
-</table>
-<% end %>
+      <%= content_tag_for(:tr, @tags) do |tag| %>
+          <td><%= tag.id %></td>
+            <td>
+            <%= link_to tag.name, tag %>
+          </td>
+            <td><%= tag.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+          <td>
+            <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_tag_path(tag), :class => 'btn btn-mini' %>
+            <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, tag, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+          </td>
+      <% end %>
+      </tbody>
+    </table>
+    <% end %>    
+  </div>
+</div>

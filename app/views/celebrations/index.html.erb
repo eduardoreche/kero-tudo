@@ -1,0 +1,55 @@
+<h1><i class="icon-calendar"></i> Celebrations</h1>
+<div class="row">
+  <div class="pull-right">
+    <%= link_to "<i class='icon-plus icon-white'></i> Create celebration".html_safe, new_celebration_path, class: "btn btn-primary btn-large" %> 
+  </div>
+</div>
+
+<div class="row">
+  <div class="span9">
+    <ul class="nav nav-tabs">
+    <% (1..12).each do |month| %>
+      <li <%= (@month.to_i == month ? "class=active" : "") %>>
+        <%= link_to month, "#{celebrations_path}?month=#{month}" %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span9">
+    
+    <% if @celebrations.size > 0 %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+            <th>Day</th>
+            <th>Description</th>
+            <th></th>
+            <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+  
+      <%= content_tag_for(:tr, @celebrations) do |celebration| %>
+          <td><%= celebration.id %></td>
+          <td><%= day_month(celebration.day, celebration.month) %></td>
+            <td>
+            <%= link_to celebration.description, celebration %>
+          </td>
+            <td>
+            <%= celebration.special %>
+          </td>
+          <td>
+            <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_celebration_path(celebration), :class => 'btn btn-mini' %>
+            <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, celebration, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+          </td>
+      <% end %>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>
