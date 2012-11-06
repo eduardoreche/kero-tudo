@@ -1,5 +1,12 @@
 <h1>Celebrations</h1>
 
+<div id="tags_group" class="well well-small pull-right">
+  <% @celebration.tags.each do |tag| %>
+    <i class="icon-tag"></i> <%= link_to tag.name, tag_path(tag) %> <br/>
+  <% end %>
+</div>
+
+
 <p>
   <strong>Description:</strong>
   <%= @celebration.description %>
@@ -19,7 +26,6 @@
   <strong>Special:</strong>
   <%= @celebration.special %>
 </p>
-
 
 <%= link_to 'Edit', edit_celebration_path(@celebration) %> |
 <%= link_to 'Back', celebrations_path %>
