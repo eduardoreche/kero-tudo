@@ -1,0 +1,4 @@
+<h1>Dashboard</h1>
+<% @celebrations.each do |c| %>
+  <%= "#{c.day}/#{c.month} #{c.description}" %> <br>
+<% end %>
