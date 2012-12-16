@@ -1,8 +1,12 @@
-<h1>Bem vindo a Kero Tudo Presentes!</h1>
+<h1>Bem vindo!</h1>  
 
 <% if user_signed_in? %>
+<div id="dashboard">
   <h2>Dashboard</h2>
   <% @celebrations.each do |c| %>
     <%= "#{c.day}/#{c.month} #{c.description}" %> <br>
   <% end %>
+</div>
 <% end %>
+
+
