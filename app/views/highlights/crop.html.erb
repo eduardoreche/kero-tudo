@@ -1,0 +1,19 @@
+<h1>Highlight <small><%= @celebration.description %></small></h1>
+
+<div class="well">
+  <div class="controls">
+    <%= image_tag @highlight.cover_photo.url(:large), id: "cropbox" %>
+  </div>
+
+  <%= form_for [@celebration,@highlight] do |f| %>
+    <div class="controls">
+      <% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>
+        <%= f.hidden_field attribute, :id => attribute %>
+      <% end %>
+    </div>
+    <div class="controls">
+      <br/>
+      <%= f.submit "Crop", :class => "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

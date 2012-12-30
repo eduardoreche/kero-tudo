@@ -1,0 +1,26 @@
+<%= simple_form_for([@celebration,@highlight], :html => {:class => 'form-horizontal', multipart: true }) do |f| %>
+  <%= f.input :end_date, as: :hidden %>
+  <div class="well">
+    <%= f.error_notification %>
+      <%= f.input :description %>
+        
+      <%= f.input :default_cover, as: :radio_buttons, collection: Highlight::DEFAULT_COVERS , item_wrapper_class: 'inline', input_html: {default: "blue"} %>
+
+      <%= f.input :cover_photo, as: :file, input_html: {class: "input-file"} %>
+        
+      <%= f.input :start_date %>
+      
+      <div class="control-group date required">
+        <label class="date required control-label">End date</label>
+        <div class="controls">
+          <div class="control-label" style="width: auto"><%= @highlight.end_date.strftime('%d/%m/%Y') %></div>
+        </div>
+      </div>
+    
+    <div class="controls">
+      <%= f.button :submit, :class => "btn btn-primary" %>
+      <%= link_to 'Cancel', root_path, :class => 'btn' %>
+    </div>
+
+  </div>
+<% end %>

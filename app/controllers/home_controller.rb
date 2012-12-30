@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
   
   def index
-    next_events if user_signed_in? 
+    if user_signed_in? 
+      next_events 
+      current_highlights
+    end
   end
   
   private
@@ -22,6 +25,10 @@ class HomeController < ApplicationController
        query += " and #{Time.days_in_month(today.month, today.year)}) or "+
                     " (month = #{limit.month} and day between 1 and #{limit.day})"
      end
+  end
+  
+  def current_highlights
+    @highlights = Highlight.where("'#{Date.today}' between start_date and end_date ")
   end
   
 end

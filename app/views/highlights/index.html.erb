@@ -1,0 +1,51 @@
+<h1>Highlights</h1>
+<div class="row">
+  <div class="pull-right">
+    <%= link_to "<i class='icon-plus icon-white'></i> Create highlight".html_safe, new_highlight_path, class: "btn btn-primary btn-large" %> 
+  </div>
+</div>
+
+<div class="row">
+  <div class="span9">
+
+    <% if @highlights.size > 0 %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+                <th>Description</th>
+                <th>Celebration</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Created at</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+  
+      <%= content_tag_for(:tr, @highlights) do |highlight| %>
+          <td><%= highlight.id %></td>
+                <td>
+            <%= link_to highlight.description, highlight %>
+          </td>
+                <td>
+            <%= highlight.celebration %>
+          </td>
+                <td>
+            <%= highlight.start_date %>
+          </td>
+                <td>
+            <%= highlight.end_date %>
+          </td>
+                <td><%= highlight.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+          <td>
+            <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_highlight_path(highlight), :class => 'btn btn-mini' %>
+            <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, highlight, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+          </td>
+      <% end %>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>

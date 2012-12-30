@@ -1,8 +1,8 @@
 KeroTudo::Application.routes.draw do
   
-  get "dashboard/index"
-
-  resources :celebrations
+  resources :celebrations do
+    resources :highlights
+  end
 
   resources :tags
 

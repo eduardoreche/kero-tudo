@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121106000801) do
+ActiveRecord::Schema.define(:version => 20121216173232) do
 
   create_table "celebration_taggings", :force => true do |t|
     t.integer  "tag_id"
@@ -37,6 +37,22 @@ ActiveRecord::Schema.define(:version => 20121106000801) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "highlights", :force => true do |t|
+    t.string   "description"
+    t.integer  "celebration_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "default_cover"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "cover_photo_file_name"
+    t.string   "cover_photo_content_type"
+    t.integer  "cover_photo_file_size"
+    t.datetime "cover_photo_updated_at"
+  end
+
+  add_index "highlights", ["celebration_id"], :name => "index_highlights_on_celebration_id"
 
   create_table "pictures", :force => true do |t|
     t.string   "description"

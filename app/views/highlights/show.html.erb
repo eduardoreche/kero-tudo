@@ -1,0 +1,22 @@
+<h1>Highlight <small><%= @celebration.description %></small></h1>
+
+<figure class="highlight">
+  <%= image_tag @highlight.cover_photo.url(:cropped) %>
+  <figcaption>
+    <%= @highlight.description %>
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @highlight.start_date.strftime('%d/%m/%Y') %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @highlight.end_date.strftime('%d/%m/%Y') %>
+</p>
+
+
+<%= link_to 'Edit', edit_celebration_highlight_path(@celebration,@highlight) %> |
+<%= link_to 'Back', root_path %>
