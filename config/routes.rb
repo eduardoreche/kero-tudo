@@ -12,7 +12,9 @@ KeroTudo::Application.routes.draw do
 
   resources :groups
 
-  root :to => "home#index"
+  root :to => "admin#index"
+  
+  match  "admin" => "admin#index"
     
   devise_for :users
 

@@ -1,0 +1,39 @@
+<h1>Bem vindo!</h1>  
+
+<% if user_signed_in? %>
+<aside>
+  <div id="dashboard" class="well span5">
+    <h2>Dashboard</h2>
+    <ul>
+    <% @celebrations.each do |c| %>
+      <li><%= "#{c.day}/#{c.month} #{c.description}" %> 
+        <small><%= link_to "Create highlight", new_celebration_highlight_path(c)%></small>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</aside>
+
+<aside>
+  <div id="highlights" class="well span5">
+    <h2>Highlights</h2>
+    <ul>
+      <% @highlights.each do |h| %>
+      <li>
+        <%= h.description %> 
+        <small>
+          <%= link_to 'Visualizar', celebration_highlight_path(h.celebration,h) %> | 
+          <%= link_to 'Remover', celebration_highlight_path(h.celebration,h), confirm: 'Você tem certeza?', method: 'delete', class: 'delete_link' %>
+        </small><br/>
+        <small><%= h.celebration.description %></small><br/>
+        <small>De <%= h.start_date.strftime('%d/%m/%Y') %> até <%= h.end_date.strftime('%d/%m/%Y') %> </small><br/>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</aside>
+
+<% end %>
+
+
+  
