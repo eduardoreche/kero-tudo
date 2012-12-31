@@ -1,39 +1,43 @@
-<h1>Bem vindo!</h1>  
-
-<% if user_signed_in? %>
-<aside>
-  <div id="dashboard" class="well span5">
-    <h2>Dashboard</h2>
-    <ul>
-    <% @celebrations.each do |c| %>
-      <li><%= "#{c.day}/#{c.month} #{c.description}" %> 
-        <small><%= link_to "Create highlight", new_celebration_highlight_path(c)%></small>
-      </li>
-    <% end %>
-    </ul>
-  </div>
-</aside>
-
-<aside>
-  <div id="highlights" class="well span5">
-    <h2>Highlights</h2>
-    <ul>
-      <% @highlights.each do |h| %>
-      <li>
-        <%= h.description %> 
-        <small>
-          <%= link_to 'Visualizar', celebration_highlight_path(h.celebration,h) %> | 
-          <%= link_to 'Remover', celebration_highlight_path(h.celebration,h), confirm: 'Você tem certeza?', method: 'delete', class: 'delete_link' %>
-        </small><br/>
-        <small><%= h.celebration.description %></small><br/>
-        <small>De <%= h.start_date.strftime('%d/%m/%Y') %> até <%= h.end_date.strftime('%d/%m/%Y') %> </small><br/>
-      </li>
-    <% end %>
-    </ul>
-  </div>
-</aside>
-
+<% content_for(:highlights) do %>
+  <% @highlights.each do |h| %>
+  <li>
+    <figure class="highlight">
+      <%= image_tag h.cover_photo.url(:cropped) %>
+      <figcaption>
+        <%= h.description %>
+      </figcaption>
+    </figure>
+  </li>
+  <% end %>
 <% end %>
 
 
-  
+<%= content_for(:products) do %>
+<% @products.in_groups_of(4) do |group| %>
+  <li class="latest_item">
+    
+    <% group.each do |product| %>
+    <article class="portfolio hentry one_fourth">    
+      <div class="portfolio_inner">
+        <figure>
+          <a href="album_four.html" class="preloader">
+            <%= image_tag product_picture_tag(product) %>
+          </a>
+        </figure>
+        <header class="entry-header">
+          <h3 class="entry-title"><a href="album_four.html"><%= product.name %></a></h3>
+        </header>
+        <footer class="entry-meta">
+          <ul class="cmsms_category">
+            <% product.tags.each do |t| %>
+              <li><a href="#"><%= t.name %></a></li>
+            <% end %>
+          </ul>
+        </footer>
+        <div class="entry-content"></div>
+      </div>
+    </article>
+    <% end %>
+  </li>
+  <% end %>
+<% end %>

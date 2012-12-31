@@ -1,5 +1,7 @@
 KeroTudo::Application.routes.draw do
   
+  get "home/index"
+
   resources :celebrations do
     resources :highlights
   end
