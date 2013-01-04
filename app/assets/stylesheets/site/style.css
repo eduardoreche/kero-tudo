@@ -14,7 +14,7 @@ Tags: light, dark, white, one-column, two-columns, left-sidebar, right-sidebar, 
 html {height:100%;}
 
 body {
-  background-color:#37261f;
+  background-color:#fff;
   background-image:url(/assets/bgs/02.jpg);
   background-repeat:repeat;
   background-attachment:fixed;

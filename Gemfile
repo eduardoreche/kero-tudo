@@ -40,3 +40,8 @@ group :test do
   gem 'launchy'  
   gem "database_cleaner"
 end
+
+#production
+group :production, :staging do
+  gem 'unicorn'
+end

@@ -20,7 +20,7 @@
     <%= javascript_include_tag "site/respond.js" %>
     <%= javascript_include_tag "site/jquery.min.js" %>
     <%= javascript_include_tag "site/jquery.easing.js" %>
-  
+    
     <!--[if lt IE 9]>
       <link rel="stylesheet" href="stylesheets/styles/ie.css" type="text/css" />
       <link rel="stylesheet" href="stylesheets/styles/ie_css3.css" type="text/css" media="screen" />
@@ -48,11 +48,11 @@
           <a class="resp_navigation" href="javascript:void(0);"><span></span></a>
           <nav>
             <ul id="navigation">
-              <li class="current_page_item" style="margin-top:80px;"><a href="index.html"><span style="background-color:#FF3399;">Home</span></a></li>
-              <li style="margin-top:24px;"><a href="javascript:void(0);"><span style="background-color:#eb6621;">Produtos</span></a>
+              <li class="current_page_item" style="margin-top:80px;"><a href="index.html"><span style="background-color:#ec268f;">Home</span></a></li>
+              <li style="margin-top:24px;"><a href="javascript:void(0);"><span style="background-color:#f58634;">Produtos</span></a>
               </li>
             </li>
-              <li style="margin-top:90px;"><a href="contacts.html"><span style="background-color:#00c481;">Contato</span></a></li>
+              <li style="margin-top:90px;"><a href="contacts.html"><span style="background-color:#00a575;">Contato</span></a></li>
             </ul>
           </nav>
           
@@ -144,7 +144,17 @@
             <div class="one_fourth">
               <h2 class="widgettitle">Facebook</h2>
               <aside class="widget widget_links">
-                <div class="fb-like-box" data-href="http://www.facebook.com/pages/Kero-Tudo-Presentes/282373601872746" data-width="190" data-show-faces="true" data-colorscheme="dark" data-stream="false" data-border-color="#efe" data-header="false"></div>              </aside>
+                <div class="fb-like-box"
+                 data-href="http://www.facebook.com/pages/Kero-Tudo-Presentes/282373601872746" 
+                 data-width="190" 
+                 data-height="300"
+                 data-show-faces="true" 
+                 data-colorscheme="dark" 
+                 data-stream="false" 
+                 data-border-color="#000" 
+                 data-header="false">
+               </div>              
+             </aside>
             </div>
             <div class="one_fourth">
             </div>
@@ -199,7 +209,7 @@
                     </div>
                     <div class="loading"></div>
                     <div><input type="hidden" name="contact_form_widget_001_wurl" id="contact_form_widget_001_wurl" value="" /></div><!-- Here you need to set the path to the sendmail file -->
-                    <div><a href="#" id="contact_form_widget_001_wformsend" class="button" tabindex="14"><span>Submit</span></a></div>
+                    <div><a href="#" id="contact_form_widget_001_wformsend" class="button" tabindex="14"><span>Enviar</span></a></div>
                   </form>
                 </div>
               </aside>
@@ -217,7 +227,7 @@
 
     <footer id="footer">
       <div class="footer_inner">
-        <span>Kero Tudo Presentes Criativos &copy; 2012 Todos os direitos reservados</span>
+        <span>Kero Tudo Presentes Criativos &copy; <%= Time.now.year %> Todos os direitos reservados</span>
       </div>
     </footer>
 <!-- __________________________________________________ Finish Footer -->
@@ -228,8 +238,6 @@
   <%= javascript_include_tag "site/jquery.validationEngine-lang.js" %>
   <%= javascript_include_tag "site/jquery.jtweetsanywhere.js" %>
   <%= javascript_include_tag "site/jquery.cmsmsResponsiveSlider.min.js" %>
-  
-  
   
   <script type="text/javascript">
       jQuery(document).ready(function () { 

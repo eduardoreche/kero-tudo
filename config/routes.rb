@@ -14,7 +14,7 @@ KeroTudo::Application.routes.draw do
 
   resources :groups
 
-  root :to => "admin#index"
+  root :to => "home#index"
   
   match  "admin" => "admin#index"
     
