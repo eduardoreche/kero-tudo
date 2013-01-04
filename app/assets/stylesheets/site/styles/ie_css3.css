@@ -61,7 +61,7 @@ select,
 .cmsms-form-builder select,
 .search_line input,
 .cmsms_slider_parent {
-	behavior:url(css/styles/pie.htc);
+  behavior:url(css/styles/pie.htc);
 }
 
 
@@ -86,25 +86,25 @@ figure img,
 .post.format-aside .entry-content,
 .wrap_author_content,
 .comment-body {
-	-pie-background:rgba(255, 255, 255, .05);
+  -pie-background:rgba(255, 255, 255, .05);
 }
 
 .headline p {
-	-pie-color:rgba(255, 255, 255, .4);
+  -pie-color:rgba(255, 255, 255, .4);
 }
 
 #middle {
-	-pie-background:rgba(0, 0, 0, .3);
+  -pie-background:rgba(0, 0, 0, .3);
 }
 
 #bottom {
-	-pie-background:rgba(0, 0, 0, .5);
+  -pie-background:rgba(0, 0, 0, .5);
 }
 
 .table thead th,
 .table tfoot th,
 .tab.lpr .tabs_tab img {
-	-pie-border-radius:0;
+  -pie-border-radius:0;
 }
 
 span.dropcap2,
@@ -130,7 +130,7 @@ code,
 .post.format-quote blockquote,
 .table thead th,
 .table tfoot th {
-	-pie-background:rgba(255, 255, 255, .1);
+  -pie-background:rgba(255, 255, 255, .1);
 }
 
 .acc .tog,
@@ -138,25 +138,25 @@ code,
 .button,
 .button_medium,
 .button_large {
-	-pie-border-radius:50px;
+  -pie-border-radius:50px;
 }
 
 .tab.lpr .tabs li + li + li a {-pie-border-radius:0 13px 0 0;}
 
 .pricingtable {
-	-pie-border-radius:20px;
+  -pie-border-radius:20px;
 }
 
 .pricingtable ul {
-	-pie-background:rgba(255, 255, 255, .03);
+  -pie-background:rgba(255, 255, 255, .03);
 }
 
 .skill_item_colored {
-	-pie-background:rgba(255, 255, 255, .15);
+  -pie-background:rgba(255, 255, 255, .15);
 }
 
 .cmsms_post_img {
-	-pie-border-radius:15px 0 15px 0;
+  -pie-border-radius:15px 0 15px 0;
 }
 
 input[type="text"],
@@ -164,17 +164,17 @@ textarea,
 select,
 .cmsms-form-builder select,
 .search_line input {
-	-pie-background:rgba(0, 0, 0, .35);
-	-pie-border-radius:8px;
+  -pie-background:rgba(0, 0, 0, .35);
+  -pie-border-radius:8px;
 }
 
 .cmsms_slider_parent {
-	-pie-background:rgba(0, 0, 0, .2);
-	-pie-border-radius:45px;
+  -pie-background:rgba(0, 0, 0, .2);
+  -pie-border-radius:45px;
 }
 
 .cmsms_slider_parent ul.cmsms_slides_nav li a {
-	-pie-background:rgba(255, 255, 255, .4);
+  -pie-background:rgba(255, 255, 255, .4);
 }
 
 .cmsms_comments:hover {-pie-background:#fff4c1;}
@@ -183,6 +183,6 @@ select,
 .opened-article figure img,
 .opened-article .format-video .jp-video img,
 .blog figure img {
-	behavior:none;
+  behavior:none;
 }
 

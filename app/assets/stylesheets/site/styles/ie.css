@@ -18,30 +18,30 @@
 #navigation > li {background-position:51% 0;}
 
 #navigation > li:before {
-	content:'';
-	background:none;
-	border-left:1px solid #beb5ae;
-	border-right:1px solid #402e1e;
-	width:4px;
-	height:10000%;
-	position:absolute;
-	left:49.6%;
-	top:-10000%;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
+  content:'';
+  background:none;
+  border-left:1px solid #beb5ae;
+  border-right:1px solid #402e1e;
+  width:4px;
+  height:10000%;
+  position:absolute;
+  left:49.6%;
+  top:-10000%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 #navigation ul,
 .p_filter_container ul.p_filter {background:#000000;}
 
 .wrap_headline {
-	border-top:1px solid #635749;
+  border-top:1px solid #635749;
 }
 
 #middle {
-	border-top:1px solid #2b221a;
-	border-bottom:1px solid #342922;
+  border-top:1px solid #2b221a;
+  border-bottom:1px solid #342922;
 }
 
 .divider,
@@ -64,58 +64,58 @@
 .error h1:before,
 .error h2:before,
 .project ul.project_details li:before {
-	border-left:10px solid #635b55;
-	border-right:10px solid #635b55;
-	background:#423930;
+  border-left:10px solid #635b55;
+  border-right:10px solid #635b55;
+  background:#423930;
 }
 
 .content_wrap:before {
-	border-top:20px solid #635b55;
-	border-bottom:20px solid #635b55;
-	background:#423930;
+  border-top:20px solid #635b55;
+  border-bottom:20px solid #635b55;
+  background:#423930;
 }
 
 .cmsms_timeline li:before,
 .cmsms_timeline:before {
-	border-top:5px solid #574e47;
-	border-bottom:5px solid #574e47;
-	background:#423930;
+  border-top:5px solid #574e47;
+  border-bottom:5px solid #574e47;
+  background:#423930;
 }
 
 .cmsms_timeline li a:before {
-	background:#463b33;
+  background:#463b33;
 }
 
 .cmsms_timeline li a:hover:before {
-	background:#6f6860;
+  background:#6f6860;
 }
 
 #bottom {
-	border-bottom:1px solid #312925;
+  border-bottom:1px solid #312925;
 }
 
 .pricingtable {
-	border:1px solid #483f37;
+  border:1px solid #483f37;
 }
 
 .pricingtable .title {
-	border-bottom:1px solid #524a43;
+  border-bottom:1px solid #524a43;
 }
 
 .pricingtable .but {
-	border-top:1px solid #524a43;
+  border-top:1px solid #524a43;
 }
 
 .jta-tweet-text:before {
-	border-top:15px solid #38302a;
+  border-top:15px solid #38302a;
 }
 
 .cmsms_comments:hover {background:#fff4c1;}
 
 .post .cmsms_tags li a:before {
-	border-top:7px solid #3f342d;
-	border-left:4px solid #3f342d;
-	border-right:4px solid #3f342d;
+  border-top:7px solid #3f342d;
+  border-left:4px solid #3f342d;
+  border-right:4px solid #3f342d;
 }
 
 .post .entry-header .cmsms_post_info .user_name, 
@@ -128,14 +128,14 @@ textarea,
 select,
 .cmsms-form-builder select,
 .search_line input {
-	border:2px solid #ffffff;
+  border:2px solid #ffffff;
 }
 
 .cmsms_slider_parent a.cmsms_prev_slide:before, 
 .cmsms_slider_parent a.cmsms_next_slide:before {
-	border-top:10px solid #746a61;
-	border-bottom:10px solid #746a61;
-	background:#655b50;
+  border-top:10px solid #746a61;
+  border-bottom:10px solid #746a61;
+  background:#655b50;
 }
 
 .cmsms_slider_parent ul.cmsms_slides_nav li a {background:#bcb7b3;}
@@ -148,23 +148,23 @@ a,
 .post .entry-header .cmsms_post_info .published,
 #comments .comment-body .published,
 .project ul.project_details li div {
-	color:#7a746f;
+  color:#7a746f;
 }
-	
-#footer .social_list {margin-top:-10px;}	
-	
+  
+#footer .social_list {margin-top:-10px;}  
+  
 ul.cmsms_category li, 
 ul.post-categories li {
     display:block;
-	float:left;
-	margin-right:5px;
+  float:left;
+  margin-right:5px;
 }
 
 div.p_filter {height:1000px;}
 
 .fullwidth {
-	height:auto;
-	max-height:100%;
+  height:auto;
+  max-height:100%;
 }
 
 .post-categories,
@@ -174,14 +174,14 @@ div.p_filter {height:1000px;}
 
 .cmsms_post_info .user_name,
 .cmsms_post_info .published {
-	display:inline;
+  display:inline;
 }
 
 .portfolio_container.one_block .cmsms_category {display:inline-block;}
 
 .tour_box_inner {
-	position:relative;
-	z-index:10;
+  position:relative;
+  z-index:10;
 }
 
 .p_filter_container ul.p_filter {height:0;}
@@ -197,10 +197,10 @@ div.jp-video:hover div.jp-interface {display:block;}
 
 .cmsms-form-builder .check_parent input[type="checkbox"], 
 .cmsms-form-builder .check_parent input[type="radio"] {
-	float:left;
-	top:10px;
-	left:0;
-	opacity:none;
+  float:left;
+  top:10px;
+  left:0;
+  opacity:none;
 }
 
 .cmsms-form-builder .check_parent input[type="radio"]+label,
@@ -215,9 +215,9 @@ html.ie7 .portfolio_container.one_block>.fl>.portfolio {width:100%}
 /* ---------- Tablet Portrait (Note: Design for a width more than 767px but less than 1024px) ---------- */
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-	
-	.portfolio_container {margin-right:-1.9%;}
-	
+  
+  .portfolio_container {margin-right:-1.9%;}
+  
 }
 
 
@@ -225,33 +225,33 @@ html.ie7 .portfolio_container.one_block>.fl>.portfolio {width:100%}
 
 @media only screen and (min-width: 541px) and (max-width: 767px) {
 
-	.four_blocks.portfolio_container .portfolio,
-	.one_fourth, 
-	.one_fourth.last,  
-	.one_fourth+.one_fourth, 
-	.one_fourth+.one_fourth+.one_fourth, 
-	.one_fourth+.one_fourth+.one_fourth+.one_fourth  {
-		width:100%;
-		float:none;
-		padding-right:0;
-	}
-	
+  .four_blocks.portfolio_container .portfolio,
+  .one_fourth, 
+  .one_fourth.last,  
+  .one_fourth+.one_fourth, 
+  .one_fourth+.one_fourth+.one_fourth, 
+  .one_fourth+.one_fourth+.one_fourth+.one_fourth  {
+    width:100%;
+    float:none;
+    padding-right:0;
+  }
+  
 }
 
 /* ---------- Mobile (Note: Design for a width less than 541px) ---------- */
 
 @media only screen and (max-width: 540px) {
 
-	.four_blocks.portfolio_container .portfolio,
-	.one_fourth, 
-	.one_fourth.last,  
-	.one_fourth+.one_fourth, 
-	.one_fourth+.one_fourth+.one_fourth, 
-	.one_fourth+.one_fourth+.one_fourth+.one_fourth  {
-		width:100%;
-		float:none;
-		padding-right:0;
-	}
-	
+  .four_blocks.portfolio_container .portfolio,
+  .one_fourth, 
+  .one_fourth.last,  
+  .one_fourth+.one_fourth, 
+  .one_fourth+.one_fourth+.one_fourth, 
+  .one_fourth+.one_fourth+.one_fourth+.one_fourth  {
+    width:100%;
+    float:none;
+    padding-right:0;
+  }
+  
 }
 

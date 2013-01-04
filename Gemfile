@@ -23,6 +23,10 @@ group :assets do
   gem 'chosen-rails'
   
   gem "jquery-fileupload-rails"
+  
+  gem "asset_sync"
+  gem "compass"
+  gem "compass-rails"
 end
 
 gem 'jquery-rails'

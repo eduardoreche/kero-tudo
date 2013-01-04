@@ -58,5 +58,10 @@ module KeroTudo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.assets.logger = false
+    config.assets.debug = true
+    
+    config.assets.initialize_on_precompile = false
+    config.assets.precompile += %w(private.js public.js application.css public.css)
   end
 end

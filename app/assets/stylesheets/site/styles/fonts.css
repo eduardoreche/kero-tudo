@@ -20,8 +20,8 @@ input[type="submit"],
 h1 {font:18px/24px "Open Sans", Arial, Geneva, Helvetica, sans-serif;}
 
 h1 {
-	font-weight:bold;
-	text-transform:uppercase;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 h2,
@@ -29,8 +29,8 @@ h2,
 
 h2,
 .sitemap > li > a {
-	font-weight:bold;
-	text-transform:uppercase;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 h3,
@@ -40,16 +40,16 @@ h3,
 h3,
 .widget_portfolio_link,
 .related_posts_content .one_half p {
-	font-weight:bold;
-	text-transform:uppercase;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 h4 {font:14px/18px "Open Sans", Arial, Geneva, Helvetica, sans-serif;}
 
 h4 {
-	font-weight:bold;
-	text-transform:uppercase;
-	font-style:italic;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-style:italic;
 }
 
 h5,
@@ -69,8 +69,8 @@ h5,
 .sitemap > li ul > li > a,
 .post .cmsms_more,
 .entry .project_navi span a {
-	font-weight:bold;
-	text-transform:uppercase;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 h6,
@@ -80,8 +80,8 @@ h6,
 h6,
 .table thead th,
 .table tfoot th {
-	font-weight:bold;
-	text-transform:uppercase;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 li {line-height:24px;}
@@ -104,15 +104,15 @@ q:before,
 blockquote:before,
 .format-quote .entry-title,
 .post.format-aside .entry-content {
-	font-weight:bold;
-	font-style:italic;
+  font-weight:bold;
+  font-style:italic;
 }
 
 q:before, 
 blockquote:before {
-	font-size:30px;
-	line-height:1em;
-	font-weight:normal;
+  font-size:30px;
+  line-height:1em;
+  font-weight:normal;
 }
 
 code {font:12px/18px Arial, Geneva, Helvetica, sans-serif;}
@@ -156,27 +156,27 @@ option,
 #navigation > li.current_page_ancestor > a,
 #navigation > li.current-menu-ancestor > a,
 #navigation > li:hover > a {
-	font-weight:bold;
-	text-transform:uppercase;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 #navigation ul li a {font:11px/18px "Open Sans", Arial, Geneva, Helvetica, sans-serif;}
 
 #navigation ul li a {
-	font-weight:bold;
-	text-transform:uppercase;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 #slider h1 {
-	font-size:31px;
-	line-height:36px;
+  font-size:31px;
+  line-height:36px;
 }
 
 #slider,
 #slider a,
 #slider h6 {
-	font-size:15px;
-	line-height:18px;
+  font-size:15px;
+  line-height:18px;
 }
 
 span.dropcap,
@@ -196,7 +196,7 @@ span.dropcap2,
 .pricingtable .period,
 .pricingtable .coins,
 ul.p_filter li a {
-	font-weight:bold;
+  font-weight:bold;
 }
 
 
@@ -204,7 +204,7 @@ ul.p_filter li a {
 
 body,
 .project ul.project_details li.published div {
-	color:#e0dfde;
+  color:#e0dfde;
 }
 
 a,
@@ -215,7 +215,7 @@ a,
 .post .entry-header .cmsms_post_info .published,
 #comments .comment-body .published,
 .project ul.project_details li div {
-	color:rgba(255, 255, 255, .4);
+  color:rgba(255, 255, 255, .4);
 }
 
 .widget_portfolio_link,
@@ -232,7 +232,7 @@ ul.p_filter li.current a,
 .related_posts_content .one_half p a,
 .tog,
 .tabs li a {
-	color:#fff4c1;
+  color:#fff4c1;
 }
 
 a:hover,
@@ -265,7 +265,7 @@ ul.p_filter li a,
 .tabs li a:hover,
 .post .entry-header .entry-title a,
 .post .entry-header .entry-title {
-	color:#ffffff;
+  color:#ffffff;
 }
 
 h1 {color:#ffffff;}
@@ -281,7 +281,7 @@ h5 {color:#ffffff;}
 h6 {color:#ffffff;}
 
 #navigation li > a {
-	color:#ffffff;
+  color:#ffffff;
 }
 
 #navigation li.current_page_item > a,
@@ -289,11 +289,11 @@ h6 {color:#ffffff;}
 #navigation li.current-menu-ancestor > a,
 #navigation li:hover > a:hover, 
 #navigation li:hover > a {
-	color:#ffffff;
+  color:#ffffff;
 }
 
 #navigation li li > a {
-	color:#ffffff;
+  color:#ffffff;
 }
 
 #navigation li li.current_page_item > a,
@@ -301,7 +301,7 @@ h6 {color:#ffffff;}
 #navigation li li.current-menu-ancestor > a,
 #navigation li li:hover > a:hover, 
 #navigation ul li:hover > a {
-	color:#fff4c1;
+  color:#fff4c1;
 }
 
 q, 
@@ -310,16 +310,16 @@ span.dropcap,
 span.dropcap2,
 .table thead th,
 .table tfoot th {
-	color:#ffffff;
+  color:#ffffff;
 }
 
 code {
-	color:#e0dfde;
+  color:#e0dfde;
 }
 
 small, 
 abbr {
-	color:#e0dfde;
+  color:#e0dfde;
 }
 
 input, 
@@ -328,16 +328,16 @@ select,
 option, 
 .cmsms-form-builder .check_parent input[type="checkbox"]+label, 
 .cmsms-form-builder .check_parent input[type="radio"]+label {
-	color:#e0dfde;
+  color:#e0dfde;
 }
 
 .pricingtable .price,
 .color2 {
-	color:#f5a615;
+  color:#f5a615;
 }
 
 .cmsms_content_slider_parent ul.cmsms_slides_nav li a {
-	background-color:#ffffff;
+  background-color:#ffffff;
 }
 
 .cmsms_content_slider_parent ul.cmsms_slides_nav li a:hover,
@@ -345,7 +345,7 @@ option,
 #slide_top,
 .cmsms_comments:hover,
 .resp_navigation {
-	background-color:#fff4c1;
+  background-color:#fff4c1;
 }
 
 span.dropcap2,
@@ -360,11 +360,11 @@ a:hover span.image_rollover,
 .p_sort .button:hover,
 a.p_cat_filter:hover,
 .cmsms_post_img {
-	background-color:#f5a615;
+  background-color:#f5a615;
 }
 
 code {
-	border-top-color:#f5a615;
+  border-top-color:#f5a615;
 }
 
 input[type="text"]:focus,
@@ -373,7 +373,7 @@ select:focus,
 option,
 .post .cmsms_tags li a:hover:before,
 .related_posts_content a img {
-	border-color:#fff4c1;
+  border-color:#fff4c1;
 }
 
 .cmsmsLike {background-color:#cccccc;}

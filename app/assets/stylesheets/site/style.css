@@ -3768,7 +3768,7 @@ textarea {width:92%;}
   position:absolute;
   top:0;
   right:0;
-  display:block\0/IE9;
+  display:blockIE9;
 }
 
 .responsiveSlider .slideCaption.left, 
@@ -3797,7 +3797,7 @@ textarea {width:92%;}
   width:43%;
   padding:2%;
   margin:0;
-  display:block\0/IE9;
+  display:blockIE9;
 }
 
 .responsiveSlider .slideCaption>.slideCaptionInner {
@@ -3814,8 +3814,8 @@ textarea {width:92%;}
 
 .responsiveSlider .slideCaption.right>.slideCaptionInner .slideCaptionInnerBlock, 
 .responsiveSlider .slideCaption.left>.slideCaptionInner .slideCaptionInnerBlock{
-  display:table-cell\0/IE9;
-  vertical-align:middle\0/IE9;
+  display:table-cellIE9;
+  vertical-align:middleIE9;
 }
 
 .responsiveSlider>li.left-img .slideCaption.top>.slideCaptionInner, 
@@ -4426,9 +4426,9 @@ a.cmsms_content_next_slide {
   .one_fourth+.one_fourth,
   .one_fourth+.one_fourth+.one_fourth,
   .one_fourth+.one_fourth+.one_fourth+.one_fourth  {
-    width:100% \0/;
-    float:none \0/;
-    padding-right:0 \0/;
+    width:100%;
+    float:none;
+    padding-right:0;
   }
   
   #top {padding:0 50px;}
@@ -4585,9 +4585,9 @@ a.cmsms_content_next_slide {
   .one_fourth+.one_fourth, 
   .one_fourth+.one_fourth+.one_fourth, 
   .one_fourth+.one_fourth+.one_fourth+.one_fourth  {
-    width:100% \0/;
-    float:none \0/;
-    padding-right:0 \0/;
+    width:100%;
+    float:none ;
+    padding-right:0 ;
   }
   
   #slider .button_medium,
