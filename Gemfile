@@ -44,4 +44,5 @@ end
 #production
 group :production, :staging do
   gem 'unicorn'
+  gem 'activerecord-postgresql-adapter'
 end
