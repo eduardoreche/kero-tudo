@@ -49,4 +49,5 @@ end
 group :production, :staging do
   gem 'unicorn'
   gem 'activerecord-postgresql-adapter'
+  gem 'aws-sdk'
 end
