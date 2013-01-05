@@ -62,6 +62,6 @@ module KeroTudo
     config.assets.debug = true
     
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += %w(private.js public.js application.css public.css)
+    config.assets.precompile += %w(private.js public.js private.css public.css)
   end
 end
