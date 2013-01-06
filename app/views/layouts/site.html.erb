@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700"  type="text/css">
     
     <link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
-      
+    
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>  
     <%= javascript_include_tag "public" %>  
     
     <!--[if lt IE 9]>
@@ -96,7 +97,7 @@
                         jQuery(document).ready(function () { 
                           jQuery('.post_type_list').cmsmsResponsiveContentSlider( { 
                             sliderWidth : '100%', 
-                            sliderHeight : 'auto', 
+                            sliderHeight : '171px', 
                             animationSpeed : 500, 
                             animationEffect : 'slide', 
                             animationEasing : 'easeInOutExpo', 
@@ -160,41 +161,7 @@
                 <h2 class="widgettitle">Fale com a gente!</h2>
                 <div class="cmsms-form-builder">
                   <div class="widgetinfo">Thank you! <br />Your message has been sent successfully.</div>
-                  <script type="text/javascript">
-                    jQuery(document).ready(function () { 
-                      jQuery('#form_contact_form_widget_001').validationEngine('init');
-                      
-                      jQuery('#form_contact_form_widget_001 a#contact_form_widget_001_wformsend').click(function () { 
-                        var form_builder_url = jQuery('#contact_form_widget_001_wurl').val();
-                        
-                        jQuery('#form_contact_form_widget_001 .loading').animate( {
-                          opacity : 1
-                        } , 250);
-                        
-                        if (jQuery('#form_contact_form_widget_001').validationEngine('validate')) { 
-                          jQuery.post(form_builder_url, {
-                            field_003 : jQuery('#field_003').val(), 
-                            field_004 : jQuery('#field_004').val(), 
-                            formname : 'contact_form_widget_001', 
-                            formtype : 'widget' 
-                          }, function () { 
-                            jQuery('#form_contact_form_widget_001 .loading').animate( { opacity : 0 }, 250);
-                            document.getElementById('form_contact_form_widget_001').reset();
-                            jQuery('#form_contact_form_widget_001').parent().find('.widgetinfo').hide();
-                            jQuery('#form_contact_form_widget_001').parent().find('.widgetinfo').fadeIn('fast');
-                            jQuery('html, body').animate( { scrollTop : (jQuery('#form_contact_form_widget_001').offset().top - 100) }, 'slow');
-                            jQuery('#form_contact_form_widget_001').parent().find('.widgetinfo').delay(5000).fadeOut(1000);
-                          } );
-                          
-                          return false;
-                        } else { 
-                          jQuery('#form_contact_form_widget_001 .loading').animate( { opacity : 0 }, 250);
-                          
-                          return false;
-                        }
-                      } );
-                    } );
-                  </script>
+
                   <form action="#" method="post" id="form_contact_form_widget_001">
                     <div class="form_info cmsms_input">
                       <label for="field_003">Email *</label>

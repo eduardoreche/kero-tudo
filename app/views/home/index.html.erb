@@ -1,5 +1,3 @@
-<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Archivo+Black", :media => "all" %>
-
 <% content_for(:highlights) do %>
   <% @highlights.each do |h| %>
   <li>
@@ -14,20 +12,20 @@
 <% end %>
 
 
-<%= content_for(:products) do %>
+<% content_for(:products) do %>
 <% @products.in_groups_of(4) do |group| %>
   <li class="latest_item">
     
-    <% group.each do |product| %>
+  <% group.each do |product| %>
     <article class="portfolio hentry one_fourth">    
       <div class="portfolio_inner">
         <figure>
-          <a href="album_four.html" class="preloader">
-            <%= image_tag product_picture_tag(product) %>
+          <a href="#">
+            <%= image_tag product_picture_tag(product), class: "fullwidth" %>
           </a>
         </figure>
-        <header class="entry-header">
-          <h3 class="entry-title"><a href="album_four.html"><%= product.name %></a></h3>
+          <header class="entry-header">
+          <h3 class="entry-title"><%= product.name %></h3>
         </header>
         <footer class="entry-meta">
           <ul class="cmsms_category">
@@ -39,7 +37,7 @@
         <div class="entry-content"></div>
       </div>
     </article>
-    <% end %>
+  <% end %>
   </li>
   <% end %>
 <% end %>
