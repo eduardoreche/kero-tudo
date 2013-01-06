@@ -3,6 +3,7 @@
 <head>
   <title>KeroTudo</title>
   <%= stylesheet_link_tag "private", :media => "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "private" %>
   <%= csrf_meta_tags %>
 </head>
@@ -20,7 +21,7 @@
         
         <div class="nav-collapse">
           <ul class="nav">
-            <li><%= link_to "<i class='icon-home'></i>Home".html_safe, "/" %></li>
+            <li><%= link_to "<i class='icon-home'></i>Home".html_safe, "/admin" %></li>
             <li><%= link_to "<i class='icon-th-list'></i>Groups".html_safe, groups_path %></li>
             <li><%= link_to "<i class='icon-tags'></i>Tags".html_safe, tags_path %></li>
             <li><%= link_to "<i class='icon-gift'></i>Products".html_safe, products_path %></li>

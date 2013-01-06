@@ -19,5 +19,6 @@ KeroTudo::Application.routes.draw do
   match  "admin" => "admin#index"
     
   devise_for :users
+  match 'user_root' => 'admin#index'
 
 end
