@@ -6,8 +6,6 @@ class Highlight < ActiveRecord::Base
   has_attached_file :cover_photo, 
                     :styles => {
                       :original => ["700x700>", :png],
-                      :small => "200x200>", 
-                      :large => "720x720>",
                       :cropped => {geometry: "", :processors => [:cropper]}
                     }
                     
