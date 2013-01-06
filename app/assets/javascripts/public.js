@@ -21,6 +21,7 @@
 //= require site/jquery.validationEngine-lang
 //= require site/jquery.jtweetsanywhere
 //= require site/jquery.cmsmsResponsiveSlider.min
+//= require site/jquery.gMap
 //= require site/home
 
 

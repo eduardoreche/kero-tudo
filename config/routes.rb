@@ -1,5 +1,7 @@
 KeroTudo::Application.routes.draw do
   
+  get "contacts/index"
+
   get "home/index"
 
   resources :celebrations do

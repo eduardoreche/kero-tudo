@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html dir="ltr" lang="en-US" class="ie6"><![endif]-->
+<!--[if IE 7]><html dir="ltr" lang="en-US" class="ie7"><![endif]-->
+<!--[if IE 8]><html dir="ltr" lang="en-US" class="ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+  <head>
+    <%= render :partial => 'layouts/site_head' %>
+  </head>
+
+  <body style="background-image:url(/assets/bgs/11.jpg)">
+    <%= render :partial => 'layouts/facebook' %>
+    
+<!-- __________________________________________________ Start Page -->
+    <section id="page">
+      <a href="#" id="slide_top"></a>
+<!-- __________________________________________________ Start Header -->
+
+      <%= render :partial => 'layouts/header' %>
+<!-- __________________________________________________ Finish Header -->
+
+
+<!-- __________________________________________________ Start Middle -->
+
+      <div class="wrap_cont_nav">
+        <div class="cont_nav">
+          <a href="index.html">Home</a>&nbsp;/&nbsp;Contato
+        </div>
+      </div>
+      <div class="wrap_headline">
+      </div>
+      <div class="container">      
+        <section id="middle">
+          <div class="middle_inner">
+<!-- __________________________________________________ Start Content -->
+
+            <div class="content_wrap">
+              <section id="content">
+                <div class="entry">
+                  <h1>Visite nossa loja</h1>
+                  <br />
+                  <div class="resizable_block">
+                    <div id="google_map_5" class="google_map fullwidth"></div>
+                  </div>
+                  <script type="text/javascript">
+                    jQuery(document).ready(function () { 
+                      jQuery('#google_map_5').gMap( { 
+                        zoom : 17, 
+                        markers : [ { 
+                          address : '', 
+                          latitude : -24.955266, 
+                          longitude : -53.458915, 
+                          mapTypeControl : false, 
+                          popup : true 
+                        } ], 
+                        controls : [], 
+                        scrollwheel : true 
+                      } );
+                    } );
+                  </script>
+                  <br /><br /><br />
+                  <h3>Send us a message</h1>
+                  <div class="cmsms-form-builder">
+                    <div class="box success_box" style="display:none;">
+                      <table>
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td>Thank You!<br>Your message has been sent successfully.</td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <form action="#" method="post" id="contactform">
+                      <div class="form_info cmsms_input">
+                        <label for="contact_name">Name *</label>
+                        <input type="text" name="contact_name" id="contact_name" value="" size="22" tabindex="3" class="validate[required,minSize[3],maxSize[100],custom[onlyLetterSp]]"/>
+                      </div>
+                      <div class="cl"></div>
+                      <div class="form_info cmsms_input">
+                        <label for="contact_email">Mail (will not be published) *</label>
+                        <input type="text" name="contact_email" id="contact_email" value="" size="22" tabindex="4" class="validate[required,custom[email]]" />
+                      </div>
+                      <div class="cl"></div>
+                      <div class="form_info cmsms_input">
+                        <label for="contact_url">Website</label>
+                        <input type="text" name="contact_url" id="contact_url" value="" size="22" tabindex="5" class="validate[custom[url]]" />
+                      </div>
+                      <div class="cl"></div>
+                      <div class="form_info cmsms_input">
+                        <label for="contact_subject">Subject *</label>
+                        <input type="text" name="contact_subject" id="contact_subject" value="" size="22" tabindex="6" class="validate[required,minSize[3],maxSize[100]]" />
+                      </div>
+                      <div class="cl"></div>
+                      <div class="form_info cmsms_textarea">
+                        <label for="contact_message">Message *</label>
+                        <textarea name="contact_message" id="contact_message" cols="28" rows="6" tabindex="7" class="validate[required,minSize[3]]" ></textarea>
+                      </div>
+                      <div class="cl"></div>
+                      <div class="form_info cmsms_checkboxes">
+                        <div class="check_parent">
+                          <input type="checkbox" name="check_1" id="check_1" value="I Agree!">
+                          <label for="check_1">I Agree!</label>
+                        </div>
+                        <div class="check_parent">
+                          <input type="checkbox" name="check_2" id="check_2" value="Yes">
+                          <label for="check_2">Yes</label>
+                        </div>
+                        <div class="check_parent">
+                          <input type="checkbox" name="check_3" id="check_3" value="No">
+                          <label for="check_3">No</label>
+                        </div>
+                      </div>
+                      <div class="form_info cmsms_radio">
+                        <div class="check_parent">
+                          <input type="radio" name="radio" id="radio_1" value="Just cool!">
+                          <label for="radio_1">Just cool!</label>
+                        </div>
+                        <div class="check_parent">
+                          <input type="radio" name="radio" id="radio_2" value="Supercool!">
+                          <label for="radio_2">Supercool!</label>
+                        </div>
+                        <div class="check_parent">
+                          <input type="radio" name="radio" id="radio_3" value="Are you kidding? This is awesome!">
+                          <label for="radio_3">Are you kidding? This is awesome!</label>
+                        </div>
+                      </div>
+                      <div class="form_info cmsms_select">
+                        <select>
+                          <option>Just cool!</option>
+                          <option>Supercool!</option>
+                          <option>Are you kidding? This is awesome!</option>
+                        </select>
+                        <span class="db">Description goes here</span>
+                      </div>
+                      <div class="cl"></div>
+                      <div><input type="hidden" name="contact_form_url" id="contact_form_url" value="http://magique-html.cmsmasters.net/php/sendmail.php" /></div><!-- Here you need to set the path to the sendmail file -->
+                      <div>
+                        <a href="#" class="button" id="contact_form_formsend" tabindex="8"><span>Send a message</span></a>
+                        <div class="loading"></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </section>
+<!-- __________________________________________________ Finish Content -->    
+
+<!-- __________________________________________________ Start Sidebar -->          
+  
+              <section id="sidebar">
+                <div class="one_first">
+                  <h2 class="widgettitle">Endereço</h2>
+                  Av. Brasil, 6320<br>
+                  Cascavel - PR <br>
+                  (45) 3324-6157
+                </div>
+                <div class="one_first">
+                  <h2 class="widgettitle">E-mail</h2>
+                  <a href="mailto:loja@eukerotudo.com.br">loja@eukerotudo.com.br</a>
+                </div>
+                <div class="one_first">
+                  <h2 class="widgettitle">Facebook fan page</h2>
+                  <a href="http://www.facebook.com/pages/Kero-Tudo-Presentes/282373601872746">
+                    Kero Tudo Presentes
+                  </a>
+                </div>
+              </section>
+<!-- __________________________________________________ Finish Sidebar -->  
+
+            </div>
+          </div>
+        </section>
+<!-- __________________________________________________ Finish Middle -->
+
+
+<!-- __________________________________________________ Start Bottom -->
+
+<%= render :partial => 'layouts/bottom' %>
+
+<!-- __________________________________________________ Finish Bottom -->
+
+      </div>
+    </section>
+<!-- __________________________________________________ Finish Page -->
+
+
+<!-- __________________________________________________ Start Footer -->
+
+<%= render :partial => 'layouts/site_footer' %>
+
+<!-- __________________________________________________ Finish Footer -->
+
+  </body>
+</html>
+

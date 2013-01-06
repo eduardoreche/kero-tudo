@@ -4,63 +4,22 @@
 <!--[if IE 8]><html dir="ltr" lang="en-US" class="ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="content-type" />
-    <meta name="description" content="kero tudo presentes criativos" />
-    <meta name="keywords" content="gift, presentes, dia das mães, dia dos pais, natal, festa, aniversário" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     
-    <%= stylesheet_link_tag "public", :media => "all" %>
-    
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700"  type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
-    
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>  
-    <%= javascript_include_tag "public" %>  
-    
-    <!--[if lt IE 9]>
-      <link rel="stylesheet" href="stylesheets/styles/ie.css" type="text/css" />
-      <link rel="stylesheet" href="stylesheets/styles/ie_css3.css" type="text/css" media="screen" />
-    <![endif]-->
-    <title>Kero Tudo Presentes Criativos</title>
+    <%= render :partial => 'layouts/site_head' %>
+
   </head>
-  <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=142359785860834";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>  
+  <body style="background-image:url(/assets/bgs/07.jpg)">
+    <%= render :partial => 'layouts/facebook' %>
     
 <!-- __________________________________________________ Start Page -->
 
     <section id="page">
       <a href="#" id="slide_top"></a>
-<!-- __________________________________________________ Start Header -->
 
-      <header id="header">
-        <div class="header_inner">
-          <a class="resp_navigation" href="javascript:void(0);"><span></span></a>
-          <nav>
-            <ul id="navigation">
-              <li class="current_page_item" style="margin-top:80px;"><a href="index.html"><span style="background-color:#ec268f;">Home</span></a></li>
-              <li style="margin-top:24px;"><a href="javascript:void(0);"><span style="background-color:#f58634;">Produtos</span></a>
-              </li>
-            </li>
-              <li style="margin-top:90px;"><a href="contacts.html"><span style="background-color:#00a575;">Contato</span></a></li>
-            </ul>
-          </nav>
-          
-          <a class="logo" href="index.html">
-            <%= image_tag "kerotudo_339x125.png", alt: "Kero Tudo Presentes Criativos" %>
-          </a>
-          
-          <div class="cl"></div>
-        </div>
-      </header>
+<!-- __________________________________________________ Start Header -->
+    <%= render :partial => 'layouts/header' %>
 <!-- __________________________________________________ Finish Header -->
+
 
       <div class="container">
 <!-- __________________________________________________ Start Top -->
@@ -126,60 +85,8 @@
 
 <!-- __________________________________________________ Start Bottom -->
 
-        <section id="bottom">
-          <div class="bottom_inner">
-            <div class="one_fourth">
-              <aside class="widget widget_links">
-                <h2 class="widgettitle">Mapa do site</h2>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Produtos</a></li>
-                  <li><a href="#">Contato</a></li>
-                </ul>
-              </aside>
-            </div>
-            <div class="one_fourth">
-              <h2 class="widgettitle">Facebook</h2>
-              <aside class="widget widget_links">
-                <div class="fb-like-box"
-                 data-href="http://www.facebook.com/pages/Kero-Tudo-Presentes/282373601872746" 
-                 data-width="190" 
-                 data-height="300"
-                 data-show-faces="true" 
-                 data-colorscheme="dark" 
-                 data-stream="false" 
-                 data-border-color="#000" 
-                 data-header="false">
-               </div>              
-             </aside>
-            </div>
-            <div class="one_fourth">
-              <h2 class="widgettitle">Parceiros</h2>
-            </div>
-            <div class="one_fourth">
-              <aside class="widget widget_custom_contact_form_entries">
-                <h2 class="widgettitle">Fale com a gente!</h2>
-                <div class="cmsms-form-builder">
-                  <div class="widgetinfo">Thank you! <br />Your message has been sent successfully.</div>
+  <%= render :partial => 'layouts/bottom' %>
 
-                  <form action="#" method="post" id="form_contact_form_widget_001">
-                    <div class="form_info cmsms_input">
-                      <label for="field_003">Email *</label>
-                      <input type="text" name="wemail" id="field_003" size="22" tabindex="11" class="validate[required,custom[email]]" />
-                    </div>
-                    <div class="form_info cmsms_textarea">
-                      <label for="field_004">Mensagem *</label>
-                      <textarea name="wmessage" id="field_004" cols="28" rows="6" tabindex="13" class="validate[required,minSize[3]]"></textarea>
-                    </div>
-                    <div class="loading"></div>
-                    <div><input type="hidden" name="contact_form_widget_001_wurl" id="contact_form_widget_001_wurl" value="" /></div><!-- Here you need to set the path to the sendmail file -->
-                    <div><a href="#" id="contact_form_widget_001_wformsend" class="button" tabindex="14"><span>Enviar</span></a></div>
-                  </form>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </section>    
 <!-- __________________________________________________ Finish Bottom -->
 
       </div>
@@ -189,11 +96,7 @@
 
 <!-- __________________________________________________ Start Footer -->
 
-    <footer id="footer">
-      <div class="footer_inner">
-        <span>Kero Tudo Presentes Criativos &copy; <%= Time.now.year %> Todos os direitos reservados - (45) 3324-6157</span>
-      </div>
-    </footer>
+    <%= render :partial => 'layouts/site_footer' %>
 <!-- __________________________________________________ Finish Footer -->
   
   <script type="text/javascript">
