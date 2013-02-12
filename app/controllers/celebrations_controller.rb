@@ -1,5 +1,6 @@
 class CelebrationsController < ApplicationController
   before_filter :authenticate_user!
+  layout "admin"
 
   # GET /celebrations
   # GET /celebrations.json

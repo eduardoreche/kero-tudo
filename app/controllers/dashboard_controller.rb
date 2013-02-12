@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-
+  layout "admin"
   
   def index
     next_events

@@ -35,6 +35,8 @@ gem 'simple_form'
 gem "paperclip", "~> 3.0"
 
 gem "json", "1.7.7" #security update
+gem "kaminari"
+
 gem 'newrelic_rpm'
 
 # Test Gems

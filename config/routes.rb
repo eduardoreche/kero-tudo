@@ -1,5 +1,7 @@
 KeroTudo::Application.routes.draw do
   
+  get "gifts/index"
+
   get "contacts/index"
 
   get "home/index"

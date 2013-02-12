@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html dir="ltr" lang="en-US" class="ie6"><![endif]-->
+<!--[if IE 7]><html dir="ltr" lang="en-US" class="ie7"><![endif]-->
+<!--[if IE 8]><html dir="ltr" lang="en-US" class="ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+  <head>
+    <%= render :partial => 'layouts/site_head' %>
+  </head>
+
+  <body style="background-image:url(/assets/bgs/03.jpg)">
+    <%= render :partial => 'layouts/facebook' %>
+    
+<!-- __________________________________________________ Start Page -->
+    <section id="page">
+      <a href="#" id="slide_top"></a>
+<!-- __________________________________________________ Start Header -->
+
+      <%= render :partial => 'layouts/header' %>
+<!-- __________________________________________________ Finish Header -->
+
+
+<!-- __________________________________________________ Start Middle -->
+
+      <div class="wrap_headline">
+        <div class="headline">
+          <h2>Presentes</h2>
+        </div>
+      </div>
+      <div class="container">      
+        <section id="middle">
+          <div class="middle_inner">
+<!-- __________________________________________________ Start Content -->
+            
+            <section id="middle_content">
+              <div class="entry">
+                <section class="portfolio_container four_blocks">
+                  
+                <% @products.each do |product| %>
+                
+                  <article class="portfolio">
+                    <div class="portfolio_inner">
+                      <figure>
+                        <a href="#">
+                          <%= image_tag product_picture_tag(product), class: "fullwidth product_pic" %>
+                        </a>
+                      </figure>
+                      <header class="entry-header">
+                        <h3 class="entry-title"><a href="album_four.html"><%= product.name %></a></h3>
+                      </header>
+                      <footer class="entry-meta">
+                        <ul class="cmsms_category">
+                          <% product.tags.each do |t| %>
+                            <li><a href="#"><%= t.name %></a></li>
+                          <% end %>
+                        </ul>
+                        <span class="meta-date" style="display:none;"><%= product.updated_at.to_i %></span>
+                      </footer>
+                      <div class="entry-content">
+                        <p><%= product.description %></p>
+                      </div>
+                    </div>
+                  </article>
+                  
+                <% end %>
+                </section>
+              </div>
+            </section>
+<!-- __________________________________________________ Finish Content -->
+            <%= paginate @products %>
+          </div>
+        </section>
+<!-- __________________________________________________ Finish Middle -->
+
+
+<!-- __________________________________________________ Start Bottom -->
+
+<%= render :partial => 'layouts/bottom' %>
+
+<!-- __________________________________________________ Finish Bottom -->
+
+      </div>
+    </section>
+<!-- __________________________________________________ Finish Page -->
+
+
+<!-- __________________________________________________ Start Footer -->
+
+<%= render :partial => 'layouts/site_footer' %>
+
+<!-- __________________________________________________ Finish Footer -->
+
+  </body>
+</html>
+
