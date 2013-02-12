@@ -128,6 +128,9 @@ GEM
       addressable (~> 2.3)
     less (2.2.2)
       commonjs (~> 0.2.6)
+    less-rails (2.2.6)
+      actionpack (>= 3.1)
+      less (~> 2.2.0)
     libv8 (3.3.10.4)
     libwebsocket (0.1.5)
       addressable
@@ -260,7 +263,7 @@ DEPENDENCIES
   json (= 1.7.7)
   kaminari
   launchy
-  less
+  less-rails
   mysql2
   newrelic_rpm
   paperclip (~> 3.0)
