@@ -19,7 +19,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   
-  gem 'twitter-bootstrap-rails', '2.2.1'
   gem 'chosen-rails'
   
   gem "jquery-fileupload-rails"
@@ -28,6 +27,8 @@ group :assets do
   gem "compass"
   gem "compass-rails"
 end
+
+gem 'twitter-bootstrap-rails', '2.2.1'
 
 gem 'jquery-rails'
 gem 'devise'
