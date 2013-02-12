@@ -30,6 +30,7 @@ group :assets do
 end
 
 gem 'twitter-bootstrap-rails', '2.2.1'
+gem 'therubyracer'
 
 gem 'jquery-rails'
 gem 'devise'
