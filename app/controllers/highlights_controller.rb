@@ -1,7 +1,6 @@
 class HighlightsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :load_celebration
-  layout "admin"
   
   # GET /highlights
   # GET /highlights.json

@@ -7,18 +7,18 @@
 }
 
 .pagination {
-  float: right;
+  float: right !important;
   a {
-    color: #fff;
-    border: 0px;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff !important;
+    border: 0px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     &:hover{
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.3) !important;
     }
   }
   .active {
     a {
-      background-color: rgba(255, 255, 255, 0);
+      background-color: rgba(255, 255, 255, 0) !important;
     }
   }
 }
