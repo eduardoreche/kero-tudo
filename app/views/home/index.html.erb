@@ -11,9 +11,11 @@
   <% end %>
   <li>
     <figure class="highlight">
-      <%= image_tag 'img/bg_r-1.jpg' %>
+      <a href="http://www.facebook.com" target="_blank">
+        <%= image_tag 'img/bg_r-1.jpg' %>
+      </a>
       <figcaption>
-        Curta nossa fan page no Facebook!
+        <%= link_to "Curta nossa fan page no Facebook!", "http://www.facebook.com/pages/Kero-Tudo-Presentes/282373601872746", target:"_blank" %>
       </figcaption>
     </figure>
   </li>
