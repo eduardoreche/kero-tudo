@@ -7,7 +7,7 @@
     <%= render :partial => 'layouts/site_head' %>
   </head>
 
-  <body style="background-image:url(/assets/bgs/03.jpg)">
+  <body style="background-image:url(/assets/bgs/05.jpg)">
     <%= render :partial => 'layouts/facebook' %>
     
     <!-- __________________________________________________ Start Page -->
@@ -25,17 +25,75 @@
 
       <div class="wrap_headline">
         <div class="headline">
-          <h2>Presentes</h2>
+            <h2>Presentes</h2>
+            <p>
+                <a href="#" class="gifts_filter"><span>Filtro1</span></a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+                <a href="#" class="gifts_filter">Filtro1</a>
+              </p>
         </div>
       </div>
       <div class="container">      
         <section id="middle">
           <div class="middle_inner">
+            <div class="content_wrap sidebar_left">
+<!-- __________________________________________________ Start Side Bar -->            
+            <section id="sidebar" class="fl">
+              <div class="one_first">
+                <h2 class="widgettitle">Menu</h2>
+                <aside>
+                  <div class="tab lpr">
+                    <ul class="tabs">
+                      <li>
+                        <a href="#" class="current">
+                          <span>O que?</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class>
+                          <span>Para quem?</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="tab_content">
+                      <div class="tabs_tab" style="display: block;">
+                        <ul>
+                          <% @groups.each do |group| %>
+                          <li><%= group.name %></li>
+                          <% end %>
+                        </ul>
+                      </div>
+                      <div class="tabs_tab" style="display: none;">
+                        <ul>
+                          <% @tags.each do |tag| %>
+                          <li><%= tag.name %></li>
+                          <% end %>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </section>
+<!-- __________________________________________________ Finish Side Bar -->
+              
 <!-- __________________________________________________ Start Content -->
             
-            <section id="middle_content">
+            <section id="content" class="fr">
               <div class="entry">
-                <section class="portfolio_container four_blocks">
+                <section class="portfolio_container three_blocks">
                   
                 <% @products.each do |product| %>
                 
@@ -66,9 +124,10 @@
                 <% end %>
                 </section>
               </div>
+              <%= paginate @products %>
             </section>
 <!-- __________________________________________________ Finish Content -->
-            <%= paginate @products %>
+            </div>
           </div>
         </section>
 <!-- __________________________________________________ Finish Middle -->
