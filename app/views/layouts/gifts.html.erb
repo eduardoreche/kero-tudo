@@ -7,7 +7,7 @@
     <%= render :partial => 'layouts/site_head' %>
   </head>
 
-  <body style="background-image:url(/assets/bgs/05.jpg)">
+  <body style="background-image:url(/assets/bgs/14.jpg)">
     <%= render :partial => 'layouts/facebook' %>
     
     <!-- __________________________________________________ Start Page -->
@@ -26,23 +26,6 @@
       <div class="wrap_headline">
         <div class="headline">
             <h2>Presentes</h2>
-            <p>
-                <a href="#" class="gifts_filter"><span>Filtro1</span></a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-                <a href="#" class="gifts_filter">Filtro1</a>
-              </p>
         </div>
       </div>
       <div class="container">      
@@ -71,14 +54,16 @@
                       <div class="tabs_tab" style="display: block;">
                         <ul>
                           <% @groups.each do |group| %>
-                          <li><%= group.name %></li>
+                          <li>
+                            <%= link_to group.name, gifts_filter_path(what: group.id), data: {remote: true, group: group.id}, class: 'add_what_link' %>
+                          </li>
                           <% end %>
                         </ul>
                       </div>
                       <div class="tabs_tab" style="display: none;">
                         <ul>
                           <% @tags.each do |tag| %>
-                          <li><%= tag.name %></li>
+                          <li><%= link_to tag.name, gifts_index_path(who: tag.id) %></li>
                           <% end %>
                         </ul>
                       </div>
@@ -93,39 +78,11 @@
             
             <section id="content" class="fr">
               <div class="entry">
-                <section class="portfolio_container three_blocks">
-                  
-                <% @products.each do |product| %>
-                
-                  <article class="portfolio">
-                    <div class="portfolio_inner">
-                      <figure>
-                        <a href="#">
-                          <%= image_tag product_picture_tag(product), class: "fullwidth product_pic" %>
-                        </a>
-                      </figure>
-                      <header class="entry-header">
-                        <h3 class="entry-title"><a href="album_four.html"><%= product.name %></a></h3>
-                      </header>
-                      <footer class="entry-meta">
-                        <ul class="cmsms_category">
-                          <% product.tags.each do |t| %>
-                            <li><a href="#"><%= t.name %></a></li>
-                          <% end %>
-                        </ul>
-                        <span class="meta-date" style="display:none;"><%= product.updated_at.to_i %></span>
-                      </footer>
-                      <div class="entry-content">
-                        <p><%= product.description %></p>
-                      </div>
-                    </div>
-                  </article>
-                  
-                <% end %>
+                <section class="waiting" style="display:none">Please wait!</section>
+                <section id="portfolio" class="portfolio_container three_blocks">
+                  <%= render :partial => 'portfolio' %>
+                  <%= paginate @products %>
                 </section>
-              </div>
-              <%= paginate @products %>
-            </section>
 <!-- __________________________________________________ Finish Content -->
             </div>
           </div>

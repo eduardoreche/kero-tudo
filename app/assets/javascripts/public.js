@@ -23,5 +23,6 @@
 //= require site/jquery.cmsmsResponsiveSlider.min
 //= require site/jquery.gMap
 //= require site/home
+//= require site/gifts
 
 

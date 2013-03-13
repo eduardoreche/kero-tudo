@@ -1,0 +1,7 @@
+<% if @what.blank? %>
+  $(window.location.replace("/gifts/index"));
+<% else %>
+  $('#portfolio').append('<%= j render("portfolio") %>');
+  $('#portfolio').fadeIn();
+  $('.waiting').hide();
+<% end %>
