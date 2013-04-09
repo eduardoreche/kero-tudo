@@ -35,6 +35,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
+gem 'friendly_id'
 
 gem "json", "1.7.7" #security update
 gem "kaminari"
@@ -43,14 +44,14 @@ gem 'newrelic_rpm'
 
 # Test Gems
 gem 'rspec-rails', :group => [:test, :development]
-group :test do
-  gem "factory_girl_rails"
-  gem "capybara"
-  gem "capybara-webkit"
-  gem "guard-rspec"
-  gem 'launchy'  
-  gem "database_cleaner"
-end
+# group :test do
+#   gem "factory_girl_rails"
+#   gem "capybara"
+#   gem "capybara-webkit"
+#   gem "guard-rspec"
+#   gem 'launchy'  
+#   gem "database_cleaner"
+# end
 
 #production
 group :production, :staging do

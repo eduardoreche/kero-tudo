@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 Celebration.create(day: 1, month: 1, description: "Confraternização Universal")
 Celebration.create(day: 1, month: 1, description: "Dia Mundial da Paz")
 Celebration.create(day: 1, month: 1, description: "Ano novo")
@@ -557,3 +549,38 @@ Celebration.create(day: 26, month: 12, description: "Dia da Lembrança")
 Celebration.create(day: 28, month: 12, description: "Dia do Salva-vidas")
 Celebration.create(day: 31, month: 12, description: "Dia de São Silvestre")
 Celebration.create(day: 31, month: 12, description: "Reveillon")
+
+Group.create(name: 'Acessório para bebê')
+Group.create(name: 'Capa celular')
+Group.create(name: 'Fone de ouvido')
+Group.create(name: 'Mousepad')
+Group.create(name: 'Apoio notebook')
+Group.create(name: 'Case notebook')
+Group.create(name: 'Almofada')
+Group.create(name: 'Boneca')
+Group.create(name: 'Caneca')
+Group.create(name: 'Copo')
+Group.create(name: 'Luminária')
+Group.create(name: 'Necessarie')
+Group.create(name: 'Pantufa')
+Group.create(name: 'Pelúcia')
+Group.create(name: 'Personalizados')
+Group.create(name: 'Porta chaves')
+Group.create(name: 'Porta jóias')
+Group.create(name: 'Porta retrato')
+Group.create(name: 'Squezze')
+Group.create(name: 'Travesseiro')
+
+Tag.create(name: 'Avós')
+Tag.create(name: 'Pai')
+Tag.create(name: 'Mãe')
+Tag.create(name: 'Filhos')
+Tag.create(name: 'Irmãos')
+Tag.create(name: 'Tios')
+Tag.create(name: 'Sobrinhos')
+Tag.create(name: 'Primos')
+Tag.create(name: 'Padrinhos')
+Tag.create(name: 'Afilhados')
+Tag.create(name: 'Esposos')
+Tag.create(name: 'Amigos')
+Tag.create(name: 'Recem Nascidos')

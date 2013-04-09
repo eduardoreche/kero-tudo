@@ -1,0 +1,7 @@
+<% if @success %>
+  alert('Ok!');
+  $('#contact_us_error').innerHTML('');
+  $('#contact_us_form').innerHTML('Sua mensagem foi enviada com sucesso!');
+<% else %>
+  $('#contact_us_error').innerHTML('Um ou mais campos não foram preenchidos corretamente, por favor verifique.');
+<% end %>

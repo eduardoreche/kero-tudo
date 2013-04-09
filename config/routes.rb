@@ -4,6 +4,7 @@ KeroTudo::Application.routes.draw do
   get "gifts/filter"
 
   get "contacts/index"
+  get "contacts/mail"
 
   get "home/index"
 
