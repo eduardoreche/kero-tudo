@@ -4,29 +4,17 @@
       <aside class="widget widget_links">
         <h2 class="widgettitle">Mapa do site</h2>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Produtos</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/gifts/index">Presentes</a></li>
+          <li><a href="/contacts/index">Contato</a></li>
         </ul>
       </aside>
     </div>
     <div class="one_fourth">
-      <h2 class="widgettitle">Facebook</h2>
-      <aside class="widget widget_links">
-        <div class="fb-like-box"
-         data-href="http://www.facebook.com/pages/Kero-Tudo-Presentes/282373601872746" 
-         data-width="190" 
-         data-height="300"
-         data-show-faces="true" 
-         data-colorscheme="dark" 
-         data-stream="false" 
-         data-border-color="#000" 
-         data-header="false">
-       </div>              
-     </aside>
+      <%= render partial: 'layouts/facebook' %>
     </div>
     <div class="one_fourth">
-      <h2 class="widgettitle">Parceiros</h2>
+      <%= render :partial => 'layouts/twitter' %>
     </div>
     <div class="one_fourth">
       <aside class="widget widget_custom_contact_form_entries">

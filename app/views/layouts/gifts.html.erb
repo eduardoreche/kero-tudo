@@ -8,7 +8,6 @@
   </head>
 
   <body style="background-image:url(/assets/bgs/14.jpg)">
-    <%= render :partial => 'layouts/facebook' %>
     
     <!-- __________________________________________________ Start Page -->
 
@@ -32,47 +31,8 @@
         <section id="middle">
           <div class="middle_inner">
             <div class="content_wrap sidebar_left">
-<!-- __________________________________________________ Start Side Bar -->            
-            <section id="sidebar" class="fl">
-              <div class="one_first">
-                <h2 class="widgettitle">Menu</h2>
-                <aside>
-                  <div class="tab lpr">
-                    <ul class="tabs">
-                      <li>
-                        <a href="#" class="current">
-                          <span>O que?</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class>
-                          <span>Para quem?</span>
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="tab_content">
-                      <div class="tabs_tab" style="display: block;">
-                        <ul>
-                          <% @groups.each do |group| %>
-                          <li>
-                            <%= link_to group.name, gifts_filter_path(what: group.id), data: {remote: true, group: group.id}, class: 'add_what_link' %>
-                          </li>
-                          <% end %>
-                        </ul>
-                      </div>
-                      <div class="tabs_tab" style="display: none;">
-                        <ul>
-                          <% @tags.each do |tag| %>
-                          <li><%= link_to tag.name, gifts_index_path(who: tag.id) %></li>
-                          <% end %>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </aside>
-              </div>
-            </section>
-<!-- __________________________________________________ Finish Side Bar -->
+
+              <%= render :partial => 'gifts_side_bar' %>
               
 <!-- __________________________________________________ Start Content -->
             

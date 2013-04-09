@@ -1,6 +1,8 @@
-  
-<% @products.each do |product| %>
+<div id="products_found">
+  <%= "#{@products.length} produto(s) encontrado(s). " %>
+</div>
 
+<% @products.each do |product| %>
   <article class="portfolio">
     <div class="portfolio_inner">
       <figure>
