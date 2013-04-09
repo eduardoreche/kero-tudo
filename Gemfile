@@ -31,7 +31,7 @@ end
 
 gem 'twitter-bootstrap-rails', '2.2.1'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.1.4'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
