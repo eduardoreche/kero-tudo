@@ -1,10 +1,21 @@
 <h1><i class="icon-picture"></i> <%= @product.name %> Pictures</h1>
+<div class="row">
+  <br><br>
+  <div>
+    <%= form_for [@product,Picture.new] do |f| %>
+      <%= f.file_field :picture, multiple: true, name: "picture[picture]" %>
+    <% end %>
+  </div>
 
-<div>
-  <%= form_for [@product,Picture.new] do |f| %>
-    <%= f.label :picture, "Upload images: " %>
-    <%= f.file_field :picture, multiple: true, name: "picture[picture]" %>
-  <% end %>
+  <div class="span9">
+    <ul id="pictures" class="thumbnails">
+      <%= render @pictures %>
+    </ul>
+  </div>
+</div>
+
+<div class="clear row">
+  <%= link_to 'Back', products_path %>
 </div>
 
 <script id="template-upload" type="text/x-tmpl">
@@ -13,14 +24,3 @@
     <div class="progress"><div class="bar" style="width: 0%"></div></div>
   </div>
 </script>
-
-<p>&nbsp;</p>
-<div class="span9">
-  <ul id="pictures" class="thumbnails">
-    <%= render @pictures %>
-  </ul>
-</div>
-
-<div class="clear row">
-  <%= link_to 'Back', products_path %>
-</div>
