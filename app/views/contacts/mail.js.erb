@@ -1,7 +1,9 @@
 <% if @success %>
-  alert('Ok!');
-  $('#contact_us_error').innerHTML('');
-  $('#contact_us_form').innerHTML('Sua mensagem foi enviada com sucesso!');
+  $("#contact_success_message").hide();
+  $("#contact_success_message .message").empty().append('Sua mensagem foi enviada com sucesso');
+  $("#contact_success_message").fadeIn();
 <% else %>
-  $('#contact_us_error').innerHTML('Um ou mais campos não foram preenchidos corretamente, por favor verifique.');
+  $('#contact_success_message').hide();
+  $('#contact_us_error').show();
+  $('#contact_form').fadeIn();
 <% end %>

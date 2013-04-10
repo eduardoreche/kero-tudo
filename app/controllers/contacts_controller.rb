@@ -9,8 +9,12 @@ class ContactsController < ApplicationController
     @from = params[:email]
     @message = params[:message]
     
-    ContactMailer.contact_us(@name, @from, @message).deliver
+    if @name.blank? || @from.blank? || @message.blank?
+      @success = false
+    else
+      ContactMailer.contact_us(@name, @from, @message).deliver
+      @success = true
+    end
     
-    @success = true
   end
 end

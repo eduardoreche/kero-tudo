@@ -1,20 +1,26 @@
+<div id="contact_success_message">
+  <div class="message">
+    Aguarde...
+  </div>
+</div>
+
 <div id="contact_us_form">
   
-  <%= form_tag contacts_mail_path, method: 'get', remote: true do |f| %>
-    <div class="row">
-      <div id="contact_us_error"></div>
+  <%= form_tag contacts_mail_path, method: 'get', remote: true, id: 'contact_form' do |f| %>
+    <div class="row" id="contact_us_error">
+      Por favor, preencha todos os campos.
     </div>
     <div class="row">
         <%= label_tag :name, 'Nome: ' %>
         <%= text_field_tag :name %>
     </div>
     <div class="row">
-      <%= label_tag :name, 'E-mail: ' %>
+      <%= label_tag :email, 'E-mail: ' %>
       <%= text_field_tag :email %>
     </div>
     <div class="row">
-      <%= label_tag :name, 'Mensagem: ' %>
-      <%= text_area_tag :message %>
+      <%= label_tag :message, 'Mensagem: ' %>
+      <textarea name="message" id="message" maxlength='300'></textarea>
     </div>
     <div class="row">
       <%= submit_tag 'Enviar', class: 'button', id: 'contact_submit' %>
