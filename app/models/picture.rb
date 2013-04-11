@@ -1,6 +1,6 @@
 class Picture < ActiveRecord::Base
   belongs_to :product
-  has_attached_file :picture, :styles => { medium: "300x300>", thumb: "206x115#" }
+  has_attached_file :picture, :styles => { medium: "600x600>", thumb: "206x115#" }
   
   attr_accessible :description, :product_id, :picture
   

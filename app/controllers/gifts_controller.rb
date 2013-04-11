@@ -15,16 +15,17 @@ class GiftsController < ApplicationController
     puts "what: #{@what.blank?}"
     
     if !@what.blank? and @who.blank?
-      puts "11111111"
       @products = Product.filtered_by_group(@what.split(",")) 
     elsif @what.blank? and !@who.blank?
-      puts "22222222"
       @products = Product.filtered_by_tag(@who.split(",")) 
     else
-      puts "33333333"
       @products = Product.filtered_by_group(@what.split(",")).
                     filtered_by_tag(@who.split(","))
     end
+  end
+  
+  def show
+    @product = Product.find(params[:id])
   end
   
 end

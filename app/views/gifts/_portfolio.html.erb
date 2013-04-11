@@ -6,15 +6,23 @@
   <article class="portfolio">
     <div class="portfolio_inner">
       <figure>
-        <a href="#">
+        <% if product.pictures.size > 0 %>
+        <a href="<%= product.pictures[0].picture.url(:medium) %>" rel="prettyPhoto" title="<%= product.description %>">
           <%= image_tag product_picture_tag(product), class: "fullwidth product_pic" %>
         </a>
+        <% else %>
+          <%= image_tag product_picture_tag(product), class: "fullwidth product_pic" %>
+        <% end %>
       </figure>
       <header class="entry-header">
-        <h3 class="entry-title"><a href="album_four.html"><%= product.name %></a></h3>
+        <h3 class="entry-title">
+          <a href="album_four.html"><%= product.name %></a>
+        </h3>
       </header>
       <footer class="entry-meta">
-        <span class="meta-date" style="display:none;"><%= product.updated_at.to_i %></span>
+        <span class="meta-date" style="display:none;">
+          <%= product.updated_at.to_i %>
+        </span>
       </footer>
       <div class="entry-content">
         <p><%= product.description %></p>
