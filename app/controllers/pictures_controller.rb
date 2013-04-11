@@ -45,6 +45,7 @@ class PicturesController < ApplicationController
   def create
     @picture = @product.pictures.build(params[:picture])
     @picture.save
+    redirect_to product_pictures_path(@product)
   end
 
   # PUT /pictures/1

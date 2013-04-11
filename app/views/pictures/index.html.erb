@@ -1,9 +1,14 @@
 <h1><i class="icon-picture"></i> <%= @product.name %> Pictures</h1>
 <div class="row">
   <br><br>
-  <div>
+  <div id="form">
     <%= form_for [@product,Picture.new] do |f| %>
-      <%= f.file_field :picture, multiple: true, name: "picture[picture]" %>
+      <div class="well">
+        <%= f.label :picture, 'Selecione uma imagem: '%>
+        <%= f.file_field :picture, name: "picture[picture]" %>
+        <br>
+        <%= f.submit 'Enviar', class: 'btn btn-primary' %>
+      </div>    
     <% end %>
   </div>
 
@@ -17,10 +22,3 @@
 <div class="clear row">
   <%= link_to 'Back', products_path %>
 </div>
-
-<script id="template-upload" type="text/x-tmpl">
-  <div class="upload">
-    {%=o.name%}
-    <div class="progress"><div class="bar" style="width: 0%"></div></div>
-  </div>
-</script>
