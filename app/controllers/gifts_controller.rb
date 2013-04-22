@@ -1,31 +1,65 @@
 class GiftsController < ApplicationController
   
+  layout "gifts"
+  
   def index
-    @products = Product.order('created_at desc').page(params[:page]).per(12)
+    session[:groups] = []
+    session[:tags] = []
+      
+    load_data_and_render_page
+  end
+
+  def filter
+    session[:groups] << params[:group].to_i if !params[:group].blank?
+    session[:groups] = session[:groups].uniq
     
-    @tags = Tag.order(:name)
-    @groups = Group.order(:name)
+    session[:tags] << params[:tag].to_i if !params[:tag].blank?
+    session[:tags] = session[:tags].uniq
+    
+    load_data_and_render_page
   end
   
-  def filter
-    @what = params[:what]
-    @who = params[:who]
+  def remove_filter
+    session[:groups].delete(params[:group].to_i) if !params[:group].blank? and session[:groups]
+    session[:tags].delete(params[:tag].to_i) if !params[:tag].blank? and session[:tags]
     
-    puts "who: #{@who.blank?}"
-    puts "what: #{@what.blank?}"
-    
-    if !@what.blank? and @who.blank?
-      @products = Product.filtered_by_group(@what.split(",")) 
-    elsif @what.blank? and !@who.blank?
-      @products = Product.filtered_by_tag(@who.split(",")) 
-    else
-      @products = Product.filtered_by_group(@what.split(",")).
-                    filtered_by_tag(@who.split(","))
-    end
+    load_data_and_render_page
   end
   
   def show
     @product = Product.find(params[:id])
+  end
+  
+  private
+  def load_tags_and_groups
+    @tags = Tag.joins(:taggings => :product).uniq.order(:name)
+    @groups = Group.joins(:products).uniq.order(:name)
+  end
+  
+  def load_filter
+    @tag_filter = Tag.where(id: session[:tags]).order(:name)
+    @group_filter = Group.where(id: session[:groups]).order(:name)
+  end
+  
+  def load_products
+    if session[:tags].empty? and session[:groups].empty?
+      @products = Product.order('created_at desc').page(params[:page]).per(12)
+    elsif !session[:groups].empty? and session[:tags].blank?
+      @products = Product.filtered_by_group(session[:groups].join(',')).page(params[:page]).per(12)
+    elsif session[:groups].empty? and !session[:tags].blank?
+      @products = Product.filtered_by_tag(session[:tags].join(',')).page(params[:page]).per(12)
+    else
+      @products = Product.filtered_by_tag(session[:tags].join(',')).
+                          filtered_by_group(session[:groups].join(',')).page(params[:page]).per(12)
+    end
+  end
+  
+  def load_data_and_render_page
+    load_filter
+    load_products  
+    load_tags_and_groups
+    
+    render :index
   end
   
 end

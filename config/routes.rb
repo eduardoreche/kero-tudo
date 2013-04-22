@@ -2,6 +2,7 @@ KeroTudo::Application.routes.draw do
   
   get "gifts/index"
   get "gifts/filter"
+  get "gifts/remove_filter"
   match 'gift/:id' => "gifts#show"
 
   get "contacts/index"

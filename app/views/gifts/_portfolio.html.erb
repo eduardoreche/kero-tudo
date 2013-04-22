@@ -1,6 +1,4 @@
-<div id="products_found">
-  <%= "#{@products.length} produto(s) encontrado(s). " %>
-</div>
+<%= @products.length <= 0 ? "Nenhum produto encontrado" : '' %>
 
 <% @products.each do |product| %>
   <article class="portfolio">
@@ -25,12 +23,12 @@
         </span>
       </footer>
       <div class="entry-content">
-        <p><%= product.description %></p>
+        <p><%= product.description %>&nbsp;</p>
       </div>
     </div>
   </article>
   
 <% end %>
-</section>
-</div>
+
+<%= paginate @products %>  
               

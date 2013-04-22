@@ -215,7 +215,7 @@ a,
 .post .entry-header .cmsms_post_info .published,
 #comments .comment-body .published,
 .project ul.project_details li div {
-  color:rgba(255, 255, 255, .4);
+  color: rgba(255, 255, 255, .4);
 }
 
 .widget_portfolio_link,
@@ -232,7 +232,7 @@ ul.p_filter li.current a,
 .related_posts_content .one_half p a,
 .tog,
 .tabs li a {
-  color:#fff4c1;
+  color: #fff4c1;
 }
 
 a:hover,

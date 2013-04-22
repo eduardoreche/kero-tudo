@@ -2,12 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.pp_description {
+  color: #4c4c4c;
+}
+
+.filter_block {
+  margin-top: 10px !important;
+  padding: 12px !important;
+  border-radius: 15px !important;
+}
+
+.filter_list {
+  margin: 5px 5px 5px 5px !important;
+  li {
+    margin-bottom: 5px;
+  }  
+}
+
+.filter_title {
+  width: 80px;
+}
+
+.comment-reply-link {
+  padding: 3px 6px 3px 3px !important;
+}
+
 .portfolio_container.three_blocks .portfolio {
   height: 210px;
 }
 
 .pagination {
   float: right !important;
+  margin-right: 45px;
+  clear: both;
   a {
     color: #fff !important;
     border: 0px !important;
@@ -81,9 +108,4 @@ a.gifts_filter {
 
 .tabs_tab ul li {
   padding: 10px 0 0 0 !important;
-}
-
-#products_found{
-  height: 30px;
-  display: none;
 }
