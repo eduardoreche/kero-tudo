@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class GroupsController < ApplicationController
   before_filter :authenticate_user!
   
@@ -75,11 +77,15 @@ class GroupsController < ApplicationController
   # DELETE /groups/1.json
   def destroy
     @group = Group.find(params[:id])
-    @group.destroy
-
+    
     respond_to do |format|
-      format.html { redirect_to groups_url, notice: 'Group was successfuly deleted.' }
-      format.json { head :no_content }
+      if !@group.products.empty?
+        format.html { redirect_to groups_url, alert: 'Não é possível apagar um grupo que possua produtos relacionados.'}
+      else
+        @group.destroy
+        format.html { redirect_to groups_url }
+        format.json { head :no_content }
+      end
     end
   end
 end

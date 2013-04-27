@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class TagsController < ApplicationController
   
   before_filter :authenticate_user!
@@ -76,11 +78,16 @@ class TagsController < ApplicationController
   # DELETE /tags/1.json
   def destroy
     @tag = Tag.find(params[:id])
-    @tag.destroy
 
     respond_to do |format|
-      format.html { redirect_to tags_url }
-      format.json { head :no_content }
+      if !@tag.products.empty?
+        format.html { redirect_to tags_url, alert: 'Não é possível apagar uma tag que possua produtos relacionados.'}
+      else
+        @tag.destroy
+        format.html { redirect_to tags_url }
+        format.json { head :no_content }
+      end
     end
+
   end
 end
