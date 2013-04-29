@@ -3,8 +3,8 @@
         <%= image_tag picture.picture.url(:thumb) %>
       <h6>&nbsp;<%= picture.description[0,20].concat("...") if picture.description %></h6>
       <p>
-      <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_product_picture_path(@product,picture), :class => 'btn btn-mini' %>
-      <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, product_picture_path(@product,picture), confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+      <%= link_to '<i class="icon-edit"></i> Editar'.html_safe, edit_product_picture_path(@product,picture), :class => 'btn btn-mini' %>
+      <%= link_to '<i class="icon-trash"></i> Apagar'.html_safe, product_picture_path(@product,picture), confirm: 'Você tem certeza?', method: :delete, :class => 'btn btn-mini btn-danger' %>
       </p>
       </div>
     </li>

@@ -1,4 +1,4 @@
-<h1><i class="icon-picture"></i> <%= @product.name %> Pictures</h1>
+<h1><i class="icon-picture"></i> Fotos de <%= @product.name %></h1>
 <div class="row">
   <br><br>
   <div id="form">
@@ -13,6 +13,7 @@
   </div>
 
   <div class="span9">
+    <h3>Adicione mais quantas imagens quiser!</h3>
     <ul id="pictures" class="thumbnails">
       <%= render @pictures %>
     </ul>
@@ -20,5 +21,5 @@
 </div>
 
 <div class="clear row">
-  <%= link_to 'Back', products_path %>
+  <%= link_to 'Voltar', products_path %>
 </div>
