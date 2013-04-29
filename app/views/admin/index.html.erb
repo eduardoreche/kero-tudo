@@ -3,7 +3,7 @@
 <% if user_signed_in? %>
 <aside>
   <div id="dashboard" class="well span5">
-    <h2>Dashboard</h2>
+    <h2>Próximas Datas Especiais</h2>
     <ul>
     <% @celebrations.each do |c| %>
       <li><%= "#{c.day}/#{c.month} #{c.description}" %> 
@@ -16,7 +16,7 @@
 
 <aside>
   <div id="highlights" class="well span5">
-    <h2>Highlights</h2>
+    <h2>Destaques na página</h2>
     <ul>
       <% @highlights.each do |h| %>
       <li>

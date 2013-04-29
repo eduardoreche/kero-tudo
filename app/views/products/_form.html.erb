@@ -1,14 +1,14 @@
 <%= simple_form_for(@product, :html => {:class => 'form-horizontal' }) do |f| %>
   <div class="well">
     <%= f.error_notification %>
-    <%= f.association :group %>
+    <%= f.association :group, hint: 'O que é isso?' %>
     <%= f.input :name %>
     <%= f.input :description, :input_html => {:class => "span6", :rows => 4 } %>
-    <%= f.association :tags, :input_html => {:class => "span6", :rows => 4 } %>
+    <%= f.association :tags, :input_html => {:class => "span6", :rows => 4 }, hint: 'Quem gostaria de receber esse presente?' %>
     
     <div class="controls">
       <%= f.button :submit, :class => "btn btn-primary" %>
-      <%= link_to 'Cancel', products_path, :class => 'btn' %>
+      <%= link_to 'Cancelar', products_path, :class => 'btn' %>
     </div>
 
   </div>

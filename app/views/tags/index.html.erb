@@ -1,20 +1,20 @@
 <h1><i class="icon-tags"></i> Tags</h1>
 <div class="row">
   <div class="pull-right">
-    <%= link_to "<i class='icon-plus icon-white'></i> Create tag".html_safe, new_tag_path, class: "btn btn-primary btn-large" %> 
+    <%= link_to "<i class='icon-plus icon-white'></i> Criar Tag".html_safe, new_tag_path, class: "btn btn-primary btn-large" %> 
   </div>
 </div>
 
 <div class="row">
-  <div class="span9">
+  <div class="span12">
     <% if @tags.size > 0 %>
     <table class="table table-striped">
       <thead>
         <tr>
           <th>#</th>
-            <th>Name</th>
-            <th>Created at</th>
-          <th>Actions</th>
+          <th>Nome</th>
+          <th>Data da criação</th>
+          <th>Ações</th>
         </tr>
       </thead>
 
@@ -27,8 +27,8 @@
           </td>
             <td><%= tag.created_at.strftime("%d/%m/%Y %H:%M") %></td>
           <td>
-            <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_tag_path(tag), :class => 'btn btn-mini' %>
-            <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, tag, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+            <%= link_to '<i class="icon-edit"></i> Editar'.html_safe, edit_tag_path(tag), :class => 'btn btn-mini' %>
+            <%= link_to '<i class="icon-trash"></i> Apagar'.html_safe, tag, confirm: 'Você tem certeza?', method: :delete, :class => 'btn btn-mini btn-danger' %>
           </td>
       <% end %>
       </tbody>

@@ -74,4 +74,8 @@ KeroTudo::Application.configure do
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+  
+  # specify what domain to use for mailer URLs
+  config.action_mailer.default_url_options = { host: "www.eukerotudo.com.br" }
+  
 end

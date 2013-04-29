@@ -1,9 +1,9 @@
-<h1><i class="icon-gift"></i> Products</h1>
+<h1><i class="icon-gift"></i> Produtos</h1>
 <div class="row">
   <div class="pull-right">
     <a href="<%= new_product_path %>" class="btn btn-primary btn-large">
       <i class="icon-plus icon-white"></i>
-      Create product
+      Criar Produto
     </a>
   </div>
 </div>
@@ -17,10 +17,10 @@
       <thead>
         <tr>
           <th>#</th>
-            <th>Name</th>
-            <th>Group</th>
-            <th>Created at</th>
-          <th>Actions</th>
+            <th>Nome</th>
+            <th>Grupo</th>
+            <th>Data da criação</th>
+            <th>Ações</th>
         </tr>
       </thead>
 
@@ -36,9 +36,9 @@
           </td>
             <td><%= product.created_at.strftime("%d/%m/%Y %H:%M") %></td>
           <td>
-            <%= link_to '<i class="icon-edit"></i> Edit'.html_safe, edit_product_path(product), :class => 'btn btn-mini' %>
-            <%= link_to '<i class="icon-trash"></i> Destroy'.html_safe, product, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %>
-            <%= link_to '<i class="icon-picture"></i> Pictures'.html_safe, product_pictures_path(product), class: "btn btn-mini" %>
+            <%= link_to '<i class="icon-edit"></i> Editar'.html_safe, edit_product_path(product), :class => 'btn btn-mini' %>
+            <%= link_to '<i class="icon-trash"></i> Apagar'.html_safe, product, confirm: 'Você tem certeza?', method: :delete, :class => 'btn btn-mini btn-danger' %>
+            <%= link_to '<i class="icon-picture"></i> Fotos'.html_safe, product_pictures_path(product), class: "btn btn-mini" %>
           </td>
       <% end %>
       </tbody>

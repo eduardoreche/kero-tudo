@@ -1,4 +1,4 @@
-<h1>Celebrations</h1>
+<h1><i class="icon-calendar"></i> <%= @celebration.description %></h1>
 
 <div id="tags_group" class="well well-small pull-right">
   <% @celebration.tags.each do |tag| %>
@@ -6,26 +6,20 @@
   <% end %>
 </div>
 
-
 <p>
-  <strong>Description:</strong>
-  <%= @celebration.description %>
-</p>
-
-<p>
-  <strong>Day:</strong>
+  <strong>Dia:</strong>
   <%= @celebration.day %>
 </p>
 
 <p>
-  <strong>Month:</strong>
+  <strong>Mês:</strong>
   <%= @celebration.month %>
 </p>
 
 <p>
-  <strong>Special:</strong>
+  <strong>Especial?</strong>
   <%= @celebration.special %>
 </p>
 
-<%= link_to 'Edit', edit_celebration_path(@celebration) %> |
-<%= link_to 'Back', celebrations_path %>
+<%= link_to 'Editar', edit_celebration_path(@celebration) %> |
+<%= link_to 'Voltar', celebrations_path %>
