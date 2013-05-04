@@ -43,14 +43,14 @@ class GiftsController < ApplicationController
   
   def load_products
     if session[:tags].empty? and session[:groups].empty?
-      @products = Product.order('created_at desc').page(params[:page]).per(12)
+      @products = Product.order('created_at desc').page(params[:page]).per(28)
     elsif !session[:groups].empty? and session[:tags].blank?
-      @products = Product.filtered_by_group(session[:groups].join(',')).page(params[:page]).per(12)
+      @products = Product.filtered_by_group(session[:groups].join(',')).page(params[:page]).per(28)
     elsif session[:groups].empty? and !session[:tags].blank?
-      @products = Product.filtered_by_tag(session[:tags].join(',')).page(params[:page]).per(12)
+      @products = Product.filtered_by_tag(session[:tags].join(',')).page(params[:page]).per(28)
     else
       @products = Product.filtered_by_tag(session[:tags].join(',')).
-                          filtered_by_group(session[:groups].join(',')).page(params[:page]).per(12)
+                          filtered_by_group(session[:groups].join(',')).page(params[:page]).per(28)
     end
   end
   
