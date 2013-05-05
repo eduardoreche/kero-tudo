@@ -1,5 +1,8 @@
 KeroTudo::Application.routes.draw do
   
+  
+  match 'special_date/:id' => 'special_date#index', as: 'special_date'
+
   get "gifts/index"
   get "gifts/filter"
   get "gifts/remove_filter"

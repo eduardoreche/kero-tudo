@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121216173232) do
+ActiveRecord::Schema.define(:version => 20130505154109) do
 
   create_table "celebration_taggings", :force => true do |t|
     t.integer  "tag_id"
@@ -50,9 +50,11 @@ ActiveRecord::Schema.define(:version => 20121216173232) do
     t.string   "cover_photo_content_type"
     t.integer  "cover_photo_file_size"
     t.datetime "cover_photo_updated_at"
+    t.string   "slug"
   end
 
   add_index "highlights", ["celebration_id"], :name => "index_highlights_on_celebration_id"
+  add_index "highlights", ["slug"], :name => "index_highlights_on_slug", :unique => true
 
   create_table "pictures", :force => true do |t|
     t.string   "description"

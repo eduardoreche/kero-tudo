@@ -1,4 +1,8 @@
 class Highlight < ActiveRecord::Base
+  extend FriendlyId
+  
+  friendly_id :celebration_date, use: :slugged
+  
   belongs_to :celebration
   
   DEFAULT_COVERS = %w(blue gray red yellow)
@@ -12,7 +16,7 @@ class Highlight < ActiveRecord::Base
   
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   attr_accessible :description, :end_date, :start_date, :default_cover, 
-                  :cover_photo, :crop_x, :crop_y, :crop_w, :crop_h
+                  :cover_photo, :crop_x, :crop_y, :crop_w, :crop_h, :slug
   
   validates_presence_of :description
   validates_presence_of :celebration
@@ -32,6 +36,11 @@ class Highlight < ActiveRecord::Base
     dimensions = Paperclip::Geometry.from_file(self.cover_photo.queued_for_write[:original])
     self.errors.add(:cover_photo, "Please upload a file at least 640px width") if dimensions.width < 640
     self.errors.add(:cover_photo, "Please upload a file at least 339px height") if dimensions.height < 339
+  end
+  
+  private
+  def celebration_date
+    "#{end_date} #{celebration.description}"
   end
   
 end

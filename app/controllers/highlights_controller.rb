@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class HighlightsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :load_celebration
@@ -27,9 +29,13 @@ class HighlightsController < ApplicationController
   # GET /highlights/new
   # GET /highlights/new.json
   def new
+    if @celebration.tags.size <= 0 
+      redirect_to admin_path, alert: "Não é possível criar o evento porque a Data Especial '#{@celebration.description}' não possui nenhuma tag atribuída."
+      return 
+    end
+    
     @highlight = @celebration.highlights.build
     set_highlight_end_date
-    
     
     respond_to do |format|
       format.html # new.html.erb

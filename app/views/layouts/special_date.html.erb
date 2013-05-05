@@ -7,7 +7,7 @@
     <%= render :partial => 'layouts/site_head' %>
   </head>
 
-  <body style="background-image:url(/assets/bgs/07.jpg)">
+  <body style="background-image:url(/assets/bgs/06.jpg)">
     
     <!-- __________________________________________________ Start Page -->
 
@@ -24,10 +24,8 @@
 
       <div class="wrap_headline">
         <div class="headline">
-            <h2>Presentes</h2>
-            <p class="filter_menu">
-              <%= yield :filter_menu %>
-            </p>
+            <h2><%= @highlight.description %></h2>
+            <h3><small><%= "#{@highlight.end_date.strftime('%d/%m')} - #{@highlight.celebration.description}" %></small></h3>
         </div>
       </div>
       <div class="container">      
@@ -35,35 +33,12 @@
           <div class="middle_inner">
             
 <!-- __________________________________________________ Start Content -->
-            <div class="pj_sort">
-            							<div class="divider"></div>
-							
-            							<div class="p_options_block" style="display: block;">
-								
-            								<div class="p_filter">
-            									<div class="p_filter_container">
-            										<a class="p_cat_filter button" data-filter="article.portfolio" title="All Categories" href="#"><span>All Categories</span></a>
-            										<ul class="p_filter">
-            											<li class="current"><a data-filter="article.portfolio" title="All Categories" href="#">All Categories</a></li>
-            											<li><a data-filter="article.portfolio[data-category~='advertising']" title="Advertising" href="#">Advertising</a></li>
-            											<li><a data-filter="article.portfolio[data-category~='artworks']" title="Artworks" href="#">Artworks</a></li>
-            											<li><a data-filter="article.portfolio[data-category~='photography']" title="Photography" href="#">Photography</a></li>
-            											<li><a data-filter="article.portfolio[data-category~='web-design']" title="Web design" href="#">Web design</a></li>
-            										</ul>
-            									</div>
-            									<div class="cl"></div>
-            								</div>
-            								<div class="cl"></div>
-            							</div>
-            							<div class="divider"></div>
-            						</div>
-            
+                          
             <section id="middle_content">
               <div class="entry">
                 <section class="waiting" style="display:none">Please wait!</section>
                 <section id="portfolio" class="portfolio_container four_blocks">
-                  <%= render :partial => 'portfolio' %>
-                  <%= paginate @products %>
+                  <%= render :partial => 'gifts/portfolio' %>
                 </section>
               </div>
             </section>

@@ -4,11 +4,10 @@
 <aside>
   <div id="dashboard" class="well span5">
     <h2>Próximas Datas Especiais</h2>
-    <ul>
+    <dl>
     <% @celebrations.each do |c| %>
-      <li><%= "#{c.day}/#{c.month} #{c.description}" %> 
-        <small><%= link_to "Create highlight", new_celebration_highlight_path(c)%></small>
-      </li>
+      <dt><%= "#{c.day}/#{c.month} #{c.description}" %> </dt>
+        <dd><%= link_to "Adicionar data especial", new_celebration_highlight_path(c) %></dd>
     <% end %>
     </ul>
   </div>
@@ -17,7 +16,7 @@
 <aside>
   <div id="highlights" class="well span5">
     <h2>Destaques na página</h2>
-    <ul>
+    <ul class="unstyled">
       <% @highlights.each do |h| %>
       <li>
         <%= h.description %> 
